@@ -20,7 +20,7 @@ var relation = {
         [[1, 2],[2, 3],[3, 4],[4, 5],[5,6],[6,7],[7,8],[8,9],[9,1]],
        
     ],
-    bead:[
+    beads:[
         [1,0,1,1,0],
         [1,0,0,1,0,1],
         [0,1,1,0,1,0,0,0,1],
@@ -31,24 +31,32 @@ var relation = {
 
 // number of examples
 var i  = getRandomInt(relation.nodes.length)
-var clr = [];
+var clr = relation.beads[i];
 
-var bc=['#F3F4F6','black']
+var bc=['#F3F4F6','black'];
+var cy_bead = relation.beads[i];
+
 // Create cytoscape nodes
-var cy_nodes = relation.nodes[i].map((x) => 
+var cy_nodes = relation.nodes[i].map((x,idx) => 
 {
-    return { data: { id: `${x}`,color: bc[getRandomInt(2)] }};
+    return { data: { id: `${x}`,color: bc[cy_bead[idx]] }};
 });
 
-for (let j = 0; j < relation.nodes[i].length; j++) {
-    if(cy_nodes[j].data.color=='black'){
-        clr.push(1)
-    }
-    else {
-        clr.push(0)
-    }
+var cy_edges = relation.edges[i].map((x) => {
+    return {
+        data: { id: `${x[0]}-${x[1]}`, source: `${x[0]}`, target: `${x[1]}` }
+    };
+});
+
+///for (let j = 0; j < relation.nodes[i].length; j++) {
+    ///if(cy_nodes[j].data.color=='black'){
+        ///clr.push(1)
+    //}
+    //else {
+        //clr.push(0)
+    //}
     //clr.push(cy_nodes[j].data.color)
-  }
+  //}
 
 function updatecol(v) {
     if ( v=='1'){
@@ -67,13 +75,8 @@ function rotate() {
     cy2.fit()},100);
 }
 
-var cy_edges = relation.edges[i].map((x) => {
-    return {
-        data: { id: `${x[0]}-${x[1]}`, source: `${x[0]}`, target: `${x[1]}` }
-    };
-});
 
-var cy_bead = relation.bead[i];
+
 
 const observ = document.getElementById("observations");
 
@@ -186,7 +189,7 @@ cy.center()
 
 
 
-var cstr = clr.join(" ")+' ';
+var cstr = clr.join(" ");
 var clrstr = clr.join(" ");
 var clrarr=[];
 var msg =  "<font size=5 color=black>" + "Original string : "+
@@ -355,9 +358,26 @@ document.querySelector('#submit').addEventListener('click', function() {
             "<br>"+"You have successfully obtained the original string representation";
     }
     else {
-        observ.innerHTML = msg +  "<br><br>"+"<font size=4 color=green>" +
+        observ.innerHTML = msg +  "<br><br>"+"<font size=4 color=red>" +
             "<b>Wrong</b>" +
             "</font>" +
             "<br>"+"both string representations are not same";
+    }
+});
+
+document.querySelector('#notequ').addEventListener('click', function() {
+    console.log('clicked submit');
+    if (clrstr==cstr){
+
+        observ.innerHTML = msg + "<br><br>"+"<font size=4 color=green>" +
+            "<b>Correct</b>" +
+            "</font>" +
+            "<br>"+"Both graphs are not equivalent";
+    }
+    else {
+        observ.innerHTML = msg +  "<br><br>"+"<font size=4 color=red>" +
+            "<b>Wrong</b>" +
+            "</font>" +
+            "<br>"+"Both are equivalent. Make transformations to get the original graph ";
     }
 });
