@@ -1,1 +1,1 @@
-## Experiment name
+## Equivalence Relation
