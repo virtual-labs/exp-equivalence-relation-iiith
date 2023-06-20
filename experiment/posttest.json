@@ -2,37 +2,88 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "Suppose A is a finite set with n elements. The number of elements and the rank of the largest equivalence relation on A are",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "{n,1}",
+        "b": "{n,n}",
+        "c": "{n^2,1}",
+        "d": "{1,n^2}"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "",
+        "b": "",
+        "c": "{n^2,1}",
+        "d": ""
       },
-      "correctAnswer": "a",
+      "correctAnswer": "c",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "Determine the number of equivalence classes that can be described by the set {2, 4, 5}.",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "125",
+        "b": "5",
+        "c": "16",
+        "d": "72"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "",
+        "b": " Suppose B={2, 4, 5} and BxB = (2,2), (4,4), (5,5), (2,4), (4,2), (4,5), (5,4), (2,5), (5,2). A relation R on set B is said to be equivalence relation if R is reflexive, Symmetric, transitive. Hence, total number of equivalence relation=5 out of 2^3=8 relations.",
+        "c": "",
+        "d": ""
       },
-      "correctAnswer": "c",
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "For a, b ∈ Z deﬁne a | b to mean that a divides b is a relation which does not satisfy ___________",
+      "answers": {
+        "a": "irreflexive and symmetric relation",
+        "b": "reflexive relation and symmetric relation",
+        "c": "transitive relation",
+        "d": "symmetric relation"
+      },
+      "explanations": {
+        "a": "Suppose, a=0, then we know that 0 does not divide 0, 0 ∤ 0 and it is not reﬂexive",
+        "b": " Suppose, a=0, then we know that 0 does not divide 0, 0 ∤ 0 and it is not reﬂexive.Again, 2 | 4 but 4 does not 2 and so it is not a symmetric relation.",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Determine the partitions of the set {3, 4, 5, 6, 7} from the following subsets.",
+      "answers": {
+        "a": " {3,5}, {3,6,7}, {4,5,6}",
+        "b": "{3}, {4,6}, {5}, {7}",
+        "c": "{3,4,6}, {7}",
+        "d": "{5,6}, {5,7}"
+      },
+      "explanations": {
+        "a": ": {3,5}, {3,6,7}, {4,5,6}. It is not a partition because these sets are not pairwise disjoint. The elements 3, 5 and 6 appear repeatedly these sets. ",
+        "b": "{3}, {4,6}, {5}, {7} this is a partition as they are pairwise disjoint",
+        "c": "{3,4,6}, {7} this is not a partition as element 5 is missing.",
+        "d": "{5,6}, {5,7} this is not a partition because it is missing the elements 3, 4 in any of the sets."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Consider the congruence 45≡3(mod 7). Find the set of equivalence class representatives.",
+      "answers": {
+        "a": "{…, 0, 7, 14, 28, …}",
+        "b": "{…, -3, 0, 6, 21, …}",
+        "c": " {…, 0, 4, 8, 16, …}",
+        "d": "{…, 3, 8, 15, 21, …}"
+      },
+      "explanations": {
+        "a": "Note that a set of class representatives is the subset of a set which contains exactly one element from each equivalence class. Now, for integers n, a and b, we have congruence a≡b(mod n), then the set of equivalence classes are {…, -2n, -n, 0, n, 2n,…}, {…, 1-2n, 1-n, 1, 1+n, 1+2n,…}. The required answer is {…, 0, 7, 14, 28, …}.",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "a",
       "difficulty": "beginner"
     }
   ]
