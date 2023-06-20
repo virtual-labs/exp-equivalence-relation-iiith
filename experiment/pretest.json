@@ -2,38 +2,90 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "Relation R is defined as R = {(a, b) | (a - b) = km for some fixed integer m and a, b, k ∈ z}, then R is",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Reflective but not symmetric",
+        "b": "Symmetric but not transitive",
+        "c": "Transitive but not reflective",
+        "d": "An equivalence relation"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": "An equivalence relation"
+      },
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "A relation R is said to be circular if aRb and bRc together imply cRa. Which of the following options is/are correct?",
+      "answers": {
+        "a": "If a relation S is transitive and circular, then S is an equivalence relation.",
+        "b": "If a relation S is reflexive and symmetric, then S is an equivalence relation.",
+        "c": "If a relation S is reflexive and circular, then S is an equivalence relation.",
+        "d": "If a relation S is circular and symmetric, then S is an equivalence relation."
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": " Suppose a relation R = {(3, 3), (5, 5), (5, 3), (5, 5), (6, 6)} on S = {3, 5, 6}. Here R is known as",
+      "answers": {
+        "a": "equivalence relation",
+        "b": "reflexive relation",
+        "c": "symmetric relation",
+        "d": "transitive relation"
+      },
+      "explanations": {
+        "a": "Here, [3] = {3, 5}, [5] = {3, 5}, [5] = {5}. We can see that [3] = [5] and that S/R will be {[3], [6]} which is a partition of S. Thus, we can choose either {3, 6} or {5, 6} as a set of representatives of the equivalence classes.",
+        "b": "",
+        "c": "",
+        "d": ""
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "if (a, b) ∈ R ⇒ (b, a) ∈ R for all a, b ∈ A then R is",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Symmetric",
+        "b": "Transitive",
+        "c": "Reflexive",
+        "d": "Equivalence relation"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
       },
-      "correctAnswer": "c",
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "If (a, b) ∈ R and (b, c) ∈ R ⇒ (a, c) ∈ R for all a, b, c ∈ A then",
+      "answers": {
+        "a": "Symmetric",
+        "b": "Transitive",
+        "c": "Reflexive",
+        "d": "Equivalence relation"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "b",
       "difficulty": "beginner"
     }
+    
   ]
 }
