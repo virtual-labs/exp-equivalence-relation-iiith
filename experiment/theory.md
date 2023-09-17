@@ -46,7 +46,7 @@ We have seen how to prove an equivalence relation. Now, we will consider an exam
 
 - Symmetricity - For $a, b \in Z$, let $(a, b) \in R \implies a \grq b$. This does not imply that $b \grq a$. For example, $12 \grq 9$ but 9 is not greater than or equal to 12. This implies $R$ is not symmetric.
 
-We do not need to check for transitivity as R is not symmetric \implies R is not an equivalence relation.
+We do not need to check for transitivity as $R$ is not symmetric $\implies R$ is not an equivalence relation.
 
 #### Definitions Related to Equivalence Relation
 
