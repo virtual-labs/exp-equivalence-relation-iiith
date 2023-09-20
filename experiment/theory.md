@@ -63,25 +63,25 @@ Now, we will understand the meaning of some terms related to equivalence relatio
 
 <details>
 <summary>
- **1. Consider A = {2, 3, 4, 5} and R = {(5, 5), (5, 3), (2, 2), (2, 4), (3, 5), (3, 3), (4, 2), (4, 4)}. Is Relation R Reflixive, Symmetric, Transitive and  Equivalent ?**
+
+> #### 1. Consider A = {2, 3, 4, 5} and R = {(5, 5), (5, 3), (2, 2), (2, 4), (3, 5), (3, 3), (4, 2), (4, 4)}. Is Relation R Reflixive, Symmetric, Transitive and  Equivalent ?
 </summary>
 
-> Relation R is reflexive because (5, 5), (2, 2), (3, 3) and (4, 4) ∈ R
-> Relation R is symmetric as whenever (a, b) ∈ R, (b, a) also relates to R. (2, 4) ∈ R ⟹ (4, 2) ∈ R
-> Relation R is transitive as whenever (a, b) and (b, c) relate to R, (a, c) also relates to R. Example: (3, 5) ∈ R and (5, 3) ∈ R ⟹ (3, 3) ∈ R.
-> R is reflexive, symmetric and transitive. So, R is an Equivalence Relation
+> ##### Relation R is reflexive because (5, 5), (2, 2), (3, 3) and (4, 4) ∈ R
+> ##### Relation R is symmetric as whenever (a, b) ∈ R, (b, a) also relates to R. (2, 4) ∈ R ⟹ (4, 2) ∈ R
+> ##### Relation R is transitive as whenever (a, b) and (b, c) relate to R, (a, c) also relates to R. Example: (3, 5) ∈ R and (5, 3) ∈ R ⟹ (3, 3) ∈ R.
+> ##### R is reflexive, symmetric and transitive. So, R is an Equivalence Relation
 </details>
 
-<details>
-<summary>
+<details><summary> 
 
-#### 2. Is Relation R in R defined as $R={(a,b):a < b}$ is  Equivalent or not ?
+> #### 2. Is Relation R in R defined as $R={(a,b):a < b}$ is  Equivalent or not ?
 
 </summary>
 
-> $(a,a): a \leq a is true \forall a \in R$ hence reflexive
-> $(a,b) \implies a \leq b,(b,c) \implies b \leq c \implies a \leq c=(a,c) \in R$ hence R is transitive.
-> $(a,b) \implies a \leq b$ ,  (b,a)∈R hence R is not symmetric. example $ (1,3) \implies 1 \leq 3 but (3,1) 3 \leq 1$
-> Relation R is reflexive, transitive but not symmetric, therefore its is not equivalent.
+> ##### $(a,a): a \leq a is true \forall a \in R$ hence reflexive
+> ##### $(a,b) \implies a \leq b,(b,c) \implies b \leq c \implies a \leq c=(a,c) \in R$ hence R is transitive.
+> ##### $(a,b) \implies a \leq b$ ,  (b,a)∈R hence R is not symmetric. example $ (1,3) \implies 1 \leq 3 but (3,1) 3 \leq 1$
+> ##### Relation R is reflexive, transitive but not symmetric, therefore its is not equivalent.
 
 </details>
