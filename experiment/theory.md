@@ -42,9 +42,9 @@ Since $R$, defined on the set of natural numbers $N$, is reflexive, symmetric, a
 
 We have seen how to prove an equivalence relation. Now, we will consider an example of a relation that is not an equivalence relation and find a counterexample for the same. Define a relation $R$ on the set of integers as $(a, b) \in R \iff a ≥ b$. We will check for the three conditions (reflexivity, symmetricity, transitivity):
 
-- Reflexivity - As every integer is equal to itself, that is, $a = a \forall a \in Z$, it satisfies $a \grq a \forall a \in Z$. This implies $(a, a) \in R \forall a \in Z$. Hence, $R$ is reflexive.
+- Reflexivity - As every integer is equal to itself, that is, $a = a \forall a \in Z$, it satisfies $a \geq a \forall a \in Z$. This implies $(a, a) \in R \forall a \in Z$. Hence, $R$ is reflexive.
 
-- Symmetricity - For $a, b \in Z$, let $(a, b) \in R \implies a \grq b$. This does not imply that $b \grq a$. For example, $12 \grq 9$ but 9 is not greater than or equal to 12. This implies $R$ is not symmetric.
+- Symmetricity - For $a, b \in Z$, let $(a, b) \in R \implies a \geq b$. This does not imply that $b \geq a$. For example, $12 \geq 9$ but 9 is not greater than or equal to 12. This implies $R$ is not symmetric.
 
 We do not need to check for transitivity as $R$ is not symmetric $\implies R$ is not an equivalence relation.
 
@@ -52,8 +52,39 @@ We do not need to check for transitivity as $R$ is not symmetric $\implies R$ is
 
 Now, we will understand the meaning of some terms related to equivalence relation such as equivalence class, partition, quotient set, etc. Consider an equivalence relation $R$ defined on set $A$ with $a, b \in A$.
 
-- Equivalence Class - An equivalence class is a subset $B$ of $A$ such $(a, b) \in R \forall a, b \in B$ and $a, b$ cannot be outside of $B$. Mathematically, an equivalence class of a is denoted as $[a]=$ {$x \in A: (a, x) \in R$} which contains all elements of $$ which are related $'a'$. All elements of $A$ equivalent to each other belong to the same equivalence class. In other words, all elements belonging to the same equivalence class are equivalent to each other.
+- Equivalence Class - An equivalence class is a subset $B$ of $A$ such $(a, b) \in R \forall a, b \in B$ and $a, b$ cannot be outside of $B$. Mathematically, an equivalence class of a is denoted as $[a]=$ { $x \in A: (a, x) \in R$ } which contains all elements of $A$ which are related to $'a'$. All elements of $A$ equivalent to each other belong to the same equivalence class. In other words, all elements belonging to the same equivalence class are equivalent to each other.
 
 - Partition - A partition of set $A$ is a non-empty set of disjoint subsets of $A$ such that no element of $A$ is in two subsets of $A$ and elements belonging to the same subset are related to each other. The union of subsets in the partition is equal to set $A$.
 
 - Quotient Set - A quotient set is a set of all equivalence classes of an equivalence relation denoted by $A/R = {[a]: a \in A}$
+
+### Example
+
+##### 1. Consider A = {2, 3, 4, 5} and R = {(5, 5), (5, 3), (2, 2), (2, 4), (3, 5), (3, 3), (4, 2), (4, 4)}.
+
+<details>
+<summary>
+
+1. Is Relation R Reflixive, Symmetric, Transitive and  Equivalent ?
+
+</summary>
+
+> Relation R is reflexive because (5, 5), (2, 2), (3, 3) and (4, 4) ∈ R
+> Relation R is symmetric as whenever (a, b) ∈ R, (b, a) also relates to R. (2, 4) ∈ R ⟹ (4, 2) ∈ R
+> Relation R is transitive as whenever (a, b) and (b, c) relate to R, (a, c) also relates to R. Example: (3, 5) ∈ R and (5, 3) ∈ R ⟹ (3, 3) ∈ R.
+> R is reflexive, symmetric and transitive. So, R is an Equivalence Relation
+</details>
+
+<details>
+<summary>
+
+2. Is Relation R in R defined as $R={(a,b):a < b}$ is  Equivalent or not ?
+
+</summary>
+
+> $(a,a): a \leq a is true \forall a \in R$ hence reflexive
+> $(a,b) \implies a \leq b,(b,c) \implies b \leq c \implies a \leq c=(a,c) \in R$ hence R is transitive.
+> $(a,b) \implies a \leq b$ ,  (b,a)∈R hence R is not symmetric. example $ (1,3) \implies 1 \leq 3 but (3,1) 3 \leq 1$
+> Relation R is reflexive, transitive but not symmetric, therefore its is not equivalent.
+
+</details>

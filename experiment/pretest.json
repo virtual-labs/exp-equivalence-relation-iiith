@@ -53,7 +53,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "if $(a, b) ∈ R \implies (b, a) ∈ R \forall a, b \in A then R$ is",
+      "question": "if $(a, b) ∈ R implies (b, a) ∈ R forall a, b in A then R$ is",
       "answers": {
         "a": "Symmetric",
         "b": "Transitive",
@@ -70,7 +70,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "If $(a, b) \in R and (b, c) \in R \implies (a, c) \in R \forall a, b, c] A$ then",
+      "question": "If $(a, b) in R and (b, c) in R implies (a, c) in R forall a, b, c] A$ then",
       "answers": {
         "a": "Symmetric",
         "b": "Transitive",
