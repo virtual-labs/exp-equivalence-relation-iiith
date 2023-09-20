@@ -36,7 +36,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "For $a, b \in Z$ deﬁne a \mid b to mean that $a$ divides $b$ is a relation which does not satisfy ___________",
+      "question": "For $a, b in Z$ deﬁne a mid b to mean that $a$ divides $b$ is a relation which does not satisfy ___________",
       "answers": {
         "a": "irreflexive and symmetric relation",
         "b": "reflexive relation and symmetric relation",
@@ -70,7 +70,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "Consider the congruence $45 \equiv 3$ (mod 7). Find the set of equivalence class representatives.",
+      "question": "Consider the congruence $45 equiv 3$ (mod 7). Find the set of equivalence class representatives.",
       "answers": {
         "a": "{…, 0, 7, 14, 28, …}",
         "b": "{…, -3, 0, 6, 21, …}",
