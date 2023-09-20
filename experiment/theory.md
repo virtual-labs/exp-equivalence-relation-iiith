@@ -60,13 +60,10 @@ Now, we will understand the meaning of some terms related to equivalence relatio
 
 ### Example
 
-##### 1. Consider A = {2, 3, 4, 5} and R = {(5, 5), (5, 3), (2, 2), (2, 4), (3, 5), (3, 3), (4, 2), (4, 4)}.
 
 <details>
 <summary>
-
-1. Is Relation R Reflixive, Symmetric, Transitive and  Equivalent ?
-
+ **1. Consider A = {2, 3, 4, 5} and R = {(5, 5), (5, 3), (2, 2), (2, 4), (3, 5), (3, 3), (4, 2), (4, 4)}. Is Relation R Reflixive, Symmetric, Transitive and  Equivalent ?**
 </summary>
 
 > Relation R is reflexive because (5, 5), (2, 2), (3, 3) and (4, 4) ∈ R
@@ -78,7 +75,7 @@ Now, we will understand the meaning of some terms related to equivalence relatio
 <details>
 <summary>
 
-2. Is Relation R in R defined as $R={(a,b):a < b}$ is  Equivalent or not ?
+#### 2. Is Relation R in R defined as $R={(a,b):a < b}$ is  Equivalent or not ?
 
 </summary>
 
