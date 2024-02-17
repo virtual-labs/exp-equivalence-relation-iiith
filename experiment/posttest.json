@@ -36,7 +36,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "For $a, b in Z$ deﬁne a mid b to mean that $a$ divides $b$ is a relation which does not satisfy ___________",
+      "question": "For $a, b$ \\in Z$ define a mid b to mean that $a divides b$ is a relation which does not satisfy ___________",
       "answers": {
         "a": "irreflexive and symmetric relation",
         "b": "reflexive relation and symmetric relation",
@@ -44,8 +44,8 @@
         "d": "symmetric relation"
       },
       "explanations": {
-        "a": "Suppose, $a=0$, then we know that $0$ does not divide $0, 0/0 and it is not reﬂexive",
-        "b": " Suppose, $a=0$, then we know that $0$ does not divide 0, 0∤ 0 and it is not reﬂexive.Again, 2 | 4 but 4 does not 2 and so it is not a symmetric relation.",
+        "a": "Suppose, $a=0$, then we know that $0 does not divide 0$, 0/0 and it is not reflexive",
+        "b": "Suppose, $a=0$, then we know that $0$ does not divide 0, 0 /0 and it is not reflexive. Again, 2 | 4 but 4 does not divide 2 and so it is not a symmetric relation.",
         "c": "",
         "d": ""
       },
@@ -70,15 +70,15 @@
       "difficulty": "beginner"
     },
     {
-      "question": "Consider the congruence $45 equiv 3$ (mod 7). Find the set of equivalence class representatives.",
+      "question": "Consider the congruence $45 \\equiv 3$ (mod 7). Find the set of equivalence class representatives.",
       "answers": {
-        "a": "{…, 0, 7, 14, 28, …}",
-        "b": "{…, -3, 0, 6, 21, …}",
-        "c": " {…, 0, 4, 8, 16, …}",
-        "d": "{…, 3, 8, 15, 21, …}"
+        "a": "{.., 0, 7, 14, 28, ..}",
+        "b": "{.., -3, 0, 6, 21, ..}",
+        "c": " {.., 0, 4, 8, 16, ..}",
+        "d": "{.., 3, 8, 15, 21, ..}"
       },
       "explanations": {
-        "a": "Note that a set of class representatives is the subset of a set which contains exactly one element from each equivalence class. Now, for integers n, a and b, we have congruence a≡b(mod n), then the set of equivalence classes are {…, -2n, -n, 0, n, 2n,…}, {…, 1-2n, 1-n, 1, 1+n, 1+2n,…}. The required answer is {…, 0, 7, 14, 28, …}.",
+        "a": "Note that a set of class representatives is the subset of a set which contains exactly one element from each equivalence class. Now, for integers n, a and b, we have congruence $a \\equiv b$ (mod n), then the set of equivalence classes are {.., -2n, -n, 0, n, 2n,..}, {.., 1-2n, 1-n, 1, 1+n, 1+2n,..}. The required answer is {.., 0, 7, 14, 28, ..}.",
         "b": "",
         "c": "",
         "d": ""
