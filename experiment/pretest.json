@@ -2,7 +2,7 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "Relation $R$ is defined as $R = {(a, b) | (a - b) = k_{m}$ for some fixed integer $m$ and $a, b, k ∈ z$}, then $R$ is",
+      "question": "Relation $R$ is defined as $R = {\\ (\\ a, b )\\ \\mid (\\ a - b )\\ = k_{m}$ for some fixed integer m and a, b, k \\in z \\} $, then $R$ is",
       "answers": {
         "a": "Reflective but not symmetric",
         "b": "Symmetric but not transitive",
