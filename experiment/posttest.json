@@ -28,7 +28,7 @@
       },
       "explanations": {
         "a": "",
-        "b": " Suppose $B={2, 4, 5} and BxB = (2,2), (4,4), (5,5), (2,4), (4,2), (4,5), (5,4), (2,5), (5,2)$. A relation $R$ on set $B$ is said to be equivalence relation if $R$ is reflexive, Symmetric, transitive. Hence, total number of equivalence relation=$5$ out of $2^3=8$ relations.",
+        "b": " Suppose $B={2, 4, 5} and BxB = (2,2), (4,4), (5,5), (2,4), (4,2), (4,5), (5,4), (2,5), (5,2)$. A relation $R$ on set $B$ is said to be equivalence relation if $R$ is reflexive, Symmetric, transitive. Hence, total number of equivalence relation=$5$ out of $2^{3}=8$ relations.",
         "c": "",
         "d": ""
       },
@@ -36,7 +36,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "For $a, b$ \\in Z$ define a mid b to mean that $a divides b$ is a relation which does not satisfy ___________",
+      "question": "For $a, b \\in Z$ defined a \\mid b to mean that a divides b$ is a relation which does not satisfy ___________",
       "answers": {
         "a": "irreflexive and symmetric relation",
         "b": "reflexive relation and symmetric relation",
@@ -45,7 +45,7 @@
       },
       "explanations": {
         "a": "Suppose, $a=0$, then we know that $0 does not divide 0$, 0/0 and it is not reflexive",
-        "b": "Suppose, $a=0$, then we know that $0$ does not divide 0, 0 /0 and it is not reflexive. Again, 2 | 4 but 4 does not divide 2 and so it is not a symmetric relation.",
+        "b": "Suppose, $a=0$, then we know that $0$ does not divide 0, 0/0 and it is not reflexive. Again, 2 | 4 but 4 does not divide 2 and so it is not a symmetric relation.",
         "c": "",
         "d": ""
       },
@@ -78,7 +78,7 @@
         "d": "{.., 3, 8, 15, 21, ..}"
       },
       "explanations": {
-        "a": "Note that a set of class representatives is the subset of a set which contains exactly one element from each equivalence class. Now, for integers n, a and b, we have congruence $a \\equiv b$ (mod n), then the set of equivalence classes are {.., -2n, -n, 0, n, 2n,..}, {.., 1-2n, 1-n, 1, 1+n, 1+2n,..}. The required answer is {.., 0, 7, 14, 28, ..}.",
+        "a": "Note that a set of class representatives is the subset of a set which contains exactly one element from each equivalence class. Now, for integers $n, a$ and $b$, we have congruence $a \\equiv b$ (mod n), then the set of equivalence classes are {.., -2n, -n, 0, n, 2n,..}, {.., 1-2n, 1-n, 1, 1+n, 1+2n,..}. The required answer is {.., 0, 7, 14, 28, ..}.",
         "b": "",
         "c": "",
         "d": ""

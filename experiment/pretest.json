@@ -2,7 +2,7 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "Relation $R$ is defined as $R = {\\ (\\ a, b )\\ \\mid (\\ a - b )\\ = k_{m} for some fixed integer m and a, b, k \\in z \\} $, then $R$ is",
+      "question": "Relation $R$ is defined as $R = { \\ ( \\ a, b ) \\ \\mid ( \\ a - b ) \\ = k_{m} for some fixed integer m and a, b, k \\in z \\ }$, then $R$ is",
       "answers": {
         "a": "Reflective but not symmetric",
         "b": "Symmetric but not transitive",
@@ -36,7 +36,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": " Suppose a relation $R = {(3, 3), (5, 5), (5, 3), (5, 5), (6, 6)} on  $S$  = {3, 5, 6}$. Here $R$ is known as",
+      "question": " Suppose a relation $R = {(3, 3), (5, 5), (5, 3), (5, 5), (6, 6)}$ on $S  = {3, 5, 6}$. Here $R$ is known as",
       "answers": {
         "a": "equivalence relation",
         "b": "reflexive relation",
@@ -53,7 +53,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "if $(a, b) ∈ R implies (b, a) ∈ R forall a, b in A then R$ is",
+      "question": "If $(a, b) \\in R \\implies (b, a) \\in R \forall a, b in A then R$ is",
       "answers": {
         "a": "Symmetric",
         "b": "Transitive",
@@ -70,7 +70,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "If $(a, b) in R and (b, c) in R implies (a, c) in R forall a, b, c] A$ then",
+      "question": "If $(a, b) \\in R and (b, c) \\in R \\implies (a, c) \\in R \\forall a, b, c ] A$ then",
       "answers": {
         "a": "Symmetric",
         "b": "Transitive",
