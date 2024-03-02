@@ -75,7 +75,7 @@ Now, we will understand the meaning of some terms related to equivalence relatio
 
 <details><summary> 
 
-> #### 2. Is Relation R in R defined as $R={(a,b):a < b}$ is  Equivalent or not ?
+> #### Is Relation R in R defined as $R={(a,b):a < b}$ is  Equivalent or not ?
 
 </summary>
 
