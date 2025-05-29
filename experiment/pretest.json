@@ -2,7 +2,7 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "Relation $R$ is defined as $R = { \\ ( \\ a, b ) \\ \\mid ( \\ a - b ) \\ = k_{m} for some fixed integer m and a, b, k \\in z \\ }$, then $R$ is",
+      "question": "Relation $ R $ is defined as $ R = { \\ ( \\ a, b ) \\ \\mid ( \\ a - b ) \\ = k_{m} for some fixed integer m and a, b, k \\in z \\ } $, then $ R $ is",
       "answers": {
         "a": "Reflective but not symmetric",
         "b": "Symmetric but not transitive",
@@ -19,12 +19,12 @@
       "difficulty": "beginner"
     },
     {
-      "question": "A relation $R$ is said to be circular if $aRb$ and $bRc$ together imply $cRa$. Which of the following options is/are correct?",
+      "question": "A relation $ R $ is said to be circular if $ aRb $ and $ bRc $ together imply $ cRa $. Which of the following options is/are correct?",
       "answers": {
-        "a": "If a relation $S$ is transitive and circular, then $S$ is an equivalence relation.",
-        "b": "If a relation $S$ is reflexive and symmetric, then $S$ is an equivalence relation.",
-        "c": "If a relation $S$ is reflexive and circular, then $S$ is an equivalence relation.",
-        "d": "If a relation $S$ is circular and symmetric, then $S$ is an equivalence relation."
+        "a": "If a relation $ S $ is transitive and circular, then $ S $ is an equivalence relation.",
+        "b": "If a relation $ S $ is reflexive and symmetric, then $ S $ is an equivalence relation.",
+        "c": "If a relation $ S $ is reflexive and circular, then $ S $ is an equivalence relation.",
+        "d": "If a relation $ S $ is circular and symmetric, then $ S $ is an equivalence relation."
       },
       "explanations": {
         "a": "Incorrect! Transitivity and circularity alone don't ensure reflexivity or symmetry. For example, consider R = {(1,2), (2,3), (3,1)} on set {1,2,3}. This relation is circular and transitive but lacks reflexivity as (1,1), (2,2), (3,3) are not in R.",
@@ -36,7 +36,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "Suppose a relation $R = {(3, 3), (5, 5), (5, 3), (5, 5), (6, 6)}$ on $S = {3, 5, 6}$. Here $R$ is known as",
+      "question": "Suppose a relation $ R = {(3, 3), (5, 5), (5, 3), (5, 5), (6, 6)} $ on $ S = {3, 5, 6} $. Here $ R $ is known as",
       "answers": {
         "a": "equivalence relation",
         "b": "reflexive relation",
@@ -53,7 +53,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "If $(a, b) \\in R \\implies (b, a) \\in R$ $\\forall a, b \\in A$ then $R$ is",
+      "question": "If $ (a, b) \\in R \\implies (b, a) \\in R $ $ \\forall a, b \\in A $ then $ R $ is",
       "answers": {
         "a": "Symmetric",
         "b": "Transitive",
@@ -70,7 +70,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "If $(a, b) \\in R$ and $(b, c) \\in R \\implies (a, c) \\in R$ $\\forall a, b, c \\in A$ then $R$ is",
+      "question": "If $ (a, b) \\in R $ and $ (b, c) \\in R \\implies (a, c) \\in R $ $ \\forall a, b, c \\in A $ then $ R $ is",
       "answers": {
         "a": "Symmetric",
         "b": "Transitive",
@@ -87,7 +87,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "Let $R$ be a relation on set $A$ where $|A| = n$. What is the minimum number of ordered pairs needed for $R$ to be an equivalence relation?",
+      "question": "Let $ R $ be a relation on set $ A $ where $ |A| = n $. What is the minimum number of ordered pairs needed for $ R $ to be an equivalence relation?",
       "answers": {
         "a": "n",
         "b": "n + 1",
@@ -104,7 +104,7 @@
       "difficulty": "intermediate"
     },
     {
-      "question": "Given a relation $R$ on set $A$, if $R$ is symmetric and transitive, what additional property must $R$ have to be an equivalence relation?",
+      "question": "Given a relation $ R $ on set $ A $, if $ R $ is symmetric and transitive, what additional property must $ R $ have to be an equivalence relation?",
       "answers": {
         "a": "Antisymmetric",
         "b": "Reflexive",
@@ -121,12 +121,12 @@
       "difficulty": "intermediate"
     },
     {
-      "question": "If $R$ is an equivalence relation on set $A$, and $[a]$ denotes the equivalence class of $a$, which statement is always true?",
+      "question": "If $ R $ is an equivalence relation on set $ A $, and $ [a] $ denotes the equivalence class of $ a $, which statement is always true?",
       "answers": {
-        "a": "$[a] \\cap [b] = \\emptyset$ if $a \\neq b$",
-        "b": "$[a] = [b]$ if and only if $(a,b) \\in R$",
-        "c": "$[a] \\cup [b]$ is always an equivalence class",
-        "d": "$|[a]| = |[b]|$ for all $a,b \\in A$"
+        "a": "$ [a] \\cap [b] = \\emptyset $ if $ a \\neq b $",
+        "b": "$ [a] = [b] $ if and only if $ (a,b) \\in R $",
+        "c": "$ [a] \\cup [b] $ is always an equivalence class",
+        "d": "$ |[a]| = |[b]| $ for all $ a,b \\in A $"
       },
       "explanations": {
         "a": "Incorrect! Two different elements can belong to the same equivalence class even if they're not equal. For example, in modulo 3 arithmetic, [0] = {0,3,6,...} and [3] = {0,3,6,...} are the same class even though 0 ≠ 3. Their intersection is not empty because they're identical.",
@@ -138,7 +138,7 @@
       "difficulty": "intermediate"
     },
     {
-      "question": "Let $R$ be an equivalence relation on an infinite set $A$. Which statement must be true about the cardinality of equivalence classes?",
+      "question": "Let $ R $ be an equivalence relation on an infinite set $ A $. Which statement must be true about the cardinality of equivalence classes?",
       "answers": {
         "a": "All equivalence classes must be finite",
         "b": "All equivalence classes must be infinite",
@@ -155,7 +155,7 @@
       "difficulty": "advanced"
     },
     {
-      "question": "If $R$ and $S$ are equivalence relations on a set $A$, what can be said about their intersection $R \\cap S$?",
+      "question": "If $ R $ and $ S $ are equivalence relations on a set $ A $, what can be said about their intersection $ R \\cap S $?",
       "answers": {
         "a": "It must be an equivalence relation",
         "b": "It is always reflexive but may not be transitive",
@@ -172,7 +172,7 @@
       "difficulty": "advanced"
     },
     {
-      "question": "Let $R$ be an equivalence relation on a finite set $A$ with $n$ elements. If there are exactly $k$ distinct equivalence classes, what can be said about their sizes?",
+      "question": "Let $ R $ be an equivalence relation on a finite set $ A $ with $ n $ elements. If there are exactly $ k $ distinct equivalence classes, what can be said about their sizes?",
       "answers": {
         "a": "All equivalence classes must have size n/k",
         "b": "The sum of the sizes must equal n",
