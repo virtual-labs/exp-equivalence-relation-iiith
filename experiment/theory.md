@@ -12,15 +12,15 @@ An equivalence relation is a binary relation defined on a set $ X $ such that th
 
 A relation in mathematics for real numbers $ \mathbb{R} $ defined on a set $ A $ is said to be an equivalence relation if and only if it is reflexive, symmetric and transitive. They are often used to group together objects that are similar, or equivalent. It satisfies the following conditions for all elements $ a, b, c \in A $:
 -  Reflexive - $ R $ is reflexive if $ (a, a) \in R $ $ \forall a \in A $
--  Symmetric - $ R $ is symmetric if and only if $ (a, b) \in R \implies (b, a) \in R $ $ \forall a, b \in A $
--  Transitive - $ R $ is transitive if and only if $ (a, b) \in R $ and $ (b, c) \in R \implies (a, c) \in R $ for all $ a, b, c \in A $
+-  Symmetric - $ R $ is symmetric if and only if $ (a, b) \in R $ $ \implies $ $ (b, a) \in R $ $ \forall a, b \in A $
+-  Transitive - $ R $ is transitive if and only if $ (a, b) \in R $ and $ (b, c) \in R $ $ \implies $ $ (a, c) \in R $ for all $ a, b, c \in A $
 
 The equivalence relation involves three types of relations such as reflexive relation, symmetric relation, transitive relation.
 
 #### Examples of Equivalence Relation
 
 - 'Is equal to $ (=) $' is an equivalence relation on any set of numbers $ A $ as for all elements $ a, b, c \in A $,
-     we have $ a = a $, $ a = b \implies b = a $, and $ a = b $, $ b = c \implies a = c $. This implies $ (=) $ is reflexive, symmetric and transitive.
+     we have $ a = a $, $ a = b $ $ \implies $ $ b = a $, and $ a = b $, $ b = c $ $ \implies $ $ a = c $. This implies $ (=) $ is reflexive, symmetric and transitive.
 
 - 'Is similar to $ (\sim) $' defined on the set of triangles: It is reflexive, symmetric, and transitive.
 - 'Has the same birthday' defined on the set of people: It is reflexive, symmetric, and transitive.
@@ -32,21 +32,21 @@ The equivalence relation involves three types of relations such as reflexive rel
 
 To understand how to prove if a relation is an equivalence relation, let us consider an example. Define a relation $ R $ on the set of natural numbers $ \mathbb{N} $ as $ (a, b) \in R $ if and only if $ a = b $. Now, we will show that the relation $ R $ is reflexive, symmetric and transitive.
 
-- Reflexive Property - Since every natural number is equal to itself, that is, $ a = a $ $ \forall a \in \mathbb{N} \implies (a, a) \in R $ $ \forall a \in \mathbb{N} $. Hence, $ R $ is reflexive.
-- Symmetric Property - For $ a, b \in \mathbb{N} $, let $ (a, b) \in R \implies a = b \implies b = a \implies (b, a) \in R $. Since $ a, b $ are arbitrary, $ R $ is symmetric.
-- Transitive Property - For $ a, b, c \in \mathbb{N} $, let $ (a, b) \in R $ and $ (b, c) \in R \implies a = b $ and $ b = c \implies a = c $ (as numbers equal to the same number are equal to one another) $ \implies (a, c) \in R $. Since $ a, b, c $ are arbitrary, $ R $ is transitive.
+- Reflexive Property - Since every natural number is equal to itself, that is, $ a = a $ $ \forall a \in \mathbb{N} $ $ \implies $ $ (a, a) \in R $ $ \forall a \in \mathbb{N} $. Hence, $ R $ is reflexive.
+- Symmetric Property - For $ a, b \in \mathbb{N} $, let $ (a, b) \in R $ $ \implies $ $ a = b $ $ \implies $ $ b = a $ $ \implies $ $ (b, a) \in R $. Since $ a, b $ are arbitrary, $ R $ is symmetric.
+- Transitive Property - For $ a, b, c \in \mathbb{N} $, let $ (a, b) \in R $ and $ (b, c) \in R $ $ \implies $ $ a = b $ and $ b = c $ $ \implies $ $ a = c $ (as numbers equal to the same number are equal to one another) $ \implies $ $ (a, c) \in R $. Since $ a, b, c $ are arbitrary, $ R $ is transitive.
 
 Since $ R $, defined on the set of natural numbers $ \mathbb{N} $, is reflexive, symmetric, and transitive, $ R $ is an equivalence relation.
 
 #### Proving a Relation is Not an Equivalence Relation
 
-We have seen how to prove an equivalence relation. Now, we will consider an example of a relation that is not an equivalence relation and find a counterexample for the same. Define a relation $ R $ on the set of integers as $ (a, b) \in R \iff a \geq b $. We will check for the three conditions (reflexivity, symmetricity, transitivity):
+We have seen how to prove an equivalence relation. Now, we will consider an example of a relation that is not an equivalence relation and find a counterexample for the same. Define a relation $ R $ on the set of integers as $ (a, b) \in R $ if and only if $ a \geq b $. We will check for the three conditions (reflexivity, symmetricity, transitivity):
 
 - Reflexivity - As every integer is equal to itself, that is, $ a = a $ $ \forall a \in \mathbb{Z} $, it satisfies $ a \geq a $ $ \forall a \in \mathbb{Z} $. This implies $ (a, a) \in R $ $ \forall a \in \mathbb{Z} $. Hence, $ R $ is reflexive.
 
-- Symmetricity - For $ a, b \in \mathbb{Z} $, let $ (a, b) \in R \implies a \geq b $. This does not imply that $ b \geq a $. For example, $ 12 \geq 9 $ but $ 9 \not\geq 12 $. This implies $ R $ is not symmetric.
+- Symmetricity - For $ a, b \in \mathbb{Z} $, let $ (a, b) \in R $ $ \implies $ $ a \geq b $. This does not imply that $ b \geq a $. For example, $ 12 \geq 9 $ but $ 9 \not\geq 12 $. This implies $ R $ is not symmetric.
 
-We do not need to check for transitivity as $ R $ is not symmetric $ \implies R $ is not an equivalence relation.
+We do not need to check for transitivity as $ R $ is not symmetric $ \implies $ $ R $ is not an equivalence relation.
 
 #### Definitions Related to Equivalence Relation
 
@@ -67,8 +67,8 @@ Now, we will understand the meaning of some terms related to equivalence relatio
 </summary>
 
 > ##### Relation $ R $ is reflexive because $ (5, 5), (2, 2), (3, 3) $ and $ (4, 4) \in R $
-> ##### Relation $ R $ is symmetric as whenever $ (a, b) \in R $, $ (b, a) $ also relates to $ R $. $ (2, 4) \in R \implies (4, 2) \in R $
-> ##### Relation $ R $ is transitive as whenever $ (a, b) $ and $ (b, c) $ relate to $ R $, $ (a, c) $ also relates to $ R $. Example: $ (3, 5) \in R $ and $ (5, 3) \in R \implies (3, 3) \in R $.
+> ##### Relation $ R $ is symmetric as whenever $ (a, b) \in R $, $ (b, a) $ also relates to $ R $. $ (2, 4) \in R $ $ \implies $ $ (4, 2) \in R $
+> ##### Relation $ R $ is transitive as whenever $ (a, b) $ and $ (b, c) $ relate to $ R $, $ (a, c) $ also relates to $ R $. Example: $ (3, 5) \in R $ and $ (5, 3) \in R $ $ \implies $ $ (3, 3) \in R $.
 > ##### $ R $ is reflexive, symmetric and transitive. So, $ R $ is an Equivalence Relation
 </details>
 
@@ -79,8 +79,8 @@ Now, we will understand the meaning of some terms related to equivalence relatio
 </summary>
 
 > ##### $ (a,a): a \leq a $ is true $ \forall a \in \mathbb{R} $ hence reflexive
-> ##### $ (a,b) \implies a \leq b $, $ (b,c) \implies b \leq c \implies a \leq c = (a,c) \in R $ hence $ R $ is transitive.
-> ##### $ (a,b) \implies a \leq b $, $ (b,a) \in R $ hence $ R $ is not symmetric. Example: $ (1,3) \implies 1 \leq 3 $ but $ (3,1) $: $ 3 $ is not $ \leq 1 $
+> ##### $ (a,b) $ $ \implies $ $ a \leq b $, $ (b,c) $ $ \implies $ $ b \leq c $ $ \implies $ $ a \leq c = (a,c) \in R $ hence $ R $ is transitive.
+> ##### $ (a,b) $ $ \implies $ $ a \leq b $, $ (b,a) \in R $ hence $ R $ is not symmetric. Example: $ (1,3) $ $ \implies $ $ 1 \leq 3 $ but $ (3,1) $: $ 3 $ is not $ \leq 1 $
 > ##### Relation $ R $ is reflexive, transitive but not symmetric, therefore it is not equivalent.
 
 </details>
