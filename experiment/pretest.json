@@ -10,10 +10,10 @@
         "d": "An equivalence relation"
       },
       "explanations": {
-        "a": "",
-        "b": "",
-        "c": "",
-        "d": "An equivalence relation"
+        "a": "Incorrect! The relation is both reflexive and symmetric. For reflexivity, when k = 0, we have a - a = 0 × m for any a, so (a,a) ∈ R. For symmetry, if a - b = k₁m, then b - a = -k₁m, which is also a multiple of m, so (b,a) ∈ R. For example, if m = 3, then (5,2) ∈ R implies (2,5) ∈ R as 5 - 2 = 1 × 3 and 2 - 5 = -1 × 3.",
+        "b": "Incorrect! The relation is both symmetric and transitive. For transitivity, if a - b = k₁m and b - c = k₂m, then a - c = (k₁ + k₂)m, which is also a multiple of m. For example, if m = 2, and (6,4) and (4,2) are in R, then (6,2) must be in R as 6 - 4 = 1 × 2 and 4 - 2 = 1 × 2 implies 6 - 2 = 2 × 2.",
+        "c": "Incorrect! The relation is both transitive and reflexive. For reflexivity, when a = b, we get a - a = 0, which is a multiple of m for any m. For example, if m = 4, then (3,3) ∈ R because 3 - 3 = 0 = 0 × 4.",
+        "d": "Correct! The relation satisfies all three properties of an equivalence relation. 1) Reflexive: a - a = 0m for all a. 2) Symmetric: if a - b = km then b - a = -km. 3) Transitive: if a - b = k₁m and b - c = k₂m then a - c = (k₁ + k₂)m. For example, with m = 2: (6,4), (4,6), (4,2), (2,4), (6,2), (2,6), and all (x,x) are in R."
       },
       "correctAnswer": "d",
       "difficulty": "beginner"
@@ -27,16 +27,16 @@
         "d": "If a relation $S$ is circular and symmetric, then $S$ is an equivalence relation."
       },
       "explanations": {
-        "a": "",
-        "b": "",
-        "c": "",
-        "d": ""
+        "a": "Incorrect! Transitivity and circularity alone don't ensure reflexivity or symmetry. For example, consider R = {(1,2), (2,3), (3,1)} on set {1,2,3}. This relation is circular and transitive but lacks reflexivity as (1,1), (2,2), (3,3) are not in R.",
+        "b": "Incorrect! Reflexivity and symmetry alone don't ensure transitivity. For example, consider R = {(1,1), (2,2), (1,2), (2,1)} on set {1,2,3}. This relation is reflexive and symmetric but not transitive as (1,2) and (2,1) are in R but (1,1) is already included.",
+        "c": "Correct! If R is reflexive and circular, it must be an equivalence relation. Here's why: 1) Reflexivity is given. 2) For symmetry: if aRb, then bRb (reflexive) and bRa (circular), so R is symmetric. 3) For transitivity: if aRb and bRc, then cRa (circular), and by symmetry aRc. For example, if (1,2) ∈ R, then (2,2) ∈ R (reflexive), which with (1,2) implies (2,1) ∈ R (circular).",
+        "d": "Incorrect! Circularity and symmetry don't ensure reflexivity. For example, consider R = {(1,2), (2,1), (2,3), (3,2)} on set {1,2,3}. This relation is circular and symmetric but lacks reflexivity as no element is related to itself."
       },
       "correctAnswer": "c",
       "difficulty": "beginner"
     },
     {
-      "question": " Suppose a relation $R = {(3, 3), (5, 5), (5, 3), (5, 5), (6, 6)}$ on $S  = {3, 5, 6}$. Here $R$ is known as",
+      "question": "Suppose a relation $R = {(3, 3), (5, 5), (5, 3), (5, 5), (6, 6)}$ on $S = {3, 5, 6}$. Here $R$ is known as",
       "answers": {
         "a": "equivalence relation",
         "b": "reflexive relation",
@@ -44,16 +44,16 @@
         "d": "transitive relation"
       },
       "explanations": {
-        "a": "Here, $[3] = {3, 5}, [5] = {3, 5}, [5] = {5}$. We can see that $[3] = [5]$ and that $S/R will be {[3], [6]}$ which is a partition of $S$. Thus, we can choose either ${3, 6} or {5, 6}$ as a set of representatives of the equivalence classes.",
-        "b": "",
-        "c": "",
-        "d": ""
+        "a": "Correct! This relation satisfies all three properties of an equivalence relation. Let's verify: 1) Reflexive: (3,3), (5,5), and (6,6) are all in R. 2) Symmetric: (5,3) ∈ R implies (3,5) must be in R. 3) Transitive: if (a,b) and (b,c) are in R, then (a,c) is in R. The equivalence classes are {3,5} and {6}.",
+        "b": "Incorrect! While this relation is indeed reflexive (as (3,3), (5,5), and (6,6) are all in R), it also has additional properties. For example, it's symmetric because whenever (a,b) is in R, (b,a) is also in R, making it more than just a reflexive relation.",
+        "c": "Incorrect! While this relation is symmetric (as shown by the presence of both (5,3) and (3,5)), it has more properties than just symmetry. For example, it's also reflexive as shown by (3,3), (5,5), and (6,6), making it more than just a symmetric relation.",
+        "d": "Incorrect! While this relation is transitive (if we follow any two related pairs, the endpoints are related), it has more properties. For example, it's also reflexive and symmetric, making it more than just a transitive relation."
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
     },
     {
-      "question": "If $(a, b) \\in R \\implies (b, a) \\in R \forall a, b in A then R$ is",
+      "question": "If $(a, b) \\in R \\implies (b, a) \\in R$ $\\forall a, b \\in A$ then $R$ is",
       "answers": {
         "a": "Symmetric",
         "b": "Transitive",
@@ -61,16 +61,16 @@
         "d": "Equivalence relation"
       },
       "explanations": {
-        "a": "",
-        "b": "",
-        "c": "",
-        "d": ""
+        "a": "Correct! This is exactly the definition of symmetry. The condition states that whenever an element a is related to b, then b must be related to a. For example, if (1,2) ∈ R, then (2,1) must also be in R. This is true for all pairs in the relation.",
+        "b": "Incorrect! Transitivity requires that if (a,b) and (b,c) are in R, then (a,c) must be in R. The given condition only ensures that pairs go both ways. For example, R = {(1,2), (2,1), (2,3), (3,2)} is symmetric but not transitive as (1,3) is missing.",
+        "c": "Incorrect! Reflexivity requires that every element is related to itself, meaning (a,a) must be in R for all a ∈ A. The given condition only ensures pairs are bidirectional. For example, R = {(1,2), (2,1)} is symmetric but not reflexive as (1,1) and (2,2) are missing.",
+        "d": "Incorrect! While the relation is symmetric, it may lack reflexivity or transitivity. For example, R = {(1,2), (2,1)} is symmetric but neither reflexive (missing (1,1), (2,2)) nor transitive."
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
     },
     {
-      "question": "If $(a, b) \\in R and (b, c) \\in R \\implies (a, c) \\in R \\forall a, b, c ] A$ then",
+      "question": "If $(a, b) \\in R$ and $(b, c) \\in R \\implies (a, c) \\in R$ $\\forall a, b, c \\in A$ then $R$ is",
       "answers": {
         "a": "Symmetric",
         "b": "Transitive",
@@ -78,14 +78,115 @@
         "d": "Equivalence relation"
       },
       "explanations": {
-        "a": "",
-        "b": "",
-        "c": "",
-        "d": ""
+        "a": "Incorrect! Symmetry requires that if (a,b) is in R, then (b,a) must be in R. The given condition only ensures that we can 'chain' relations together. For example, R = {(1,2), (2,3), (1,3)} is transitive but not symmetric as (2,1), (3,2), (3,1) are missing.",
+        "b": "Correct! This is exactly the definition of transitivity. If we can get from a to b and from b to c through the relation, we must be able to get directly from a to c. For example, if (1,2) and (2,3) are in R, then (1,3) must also be in R. This property ensures we can 'chain' relations together.",
+        "c": "Incorrect! Reflexivity requires that (a,a) ∈ R for all a ∈ A. The given condition only ensures that chains of relations can be shortened. For example, R = {(1,2), (2,3), (1,3)} is transitive but not reflexive as (1,1), (2,2), (3,3) are missing.",
+        "d": "Incorrect! While the relation is transitive, it may lack reflexivity or symmetry. For example, R = {(1,2), (2,3), (1,3)} is transitive but neither reflexive nor symmetric."
       },
       "correctAnswer": "b",
       "difficulty": "beginner"
+    },
+    {
+      "question": "Let $R$ be a relation on set $A$ where $|A| = n$. What is the minimum number of ordered pairs needed for $R$ to be an equivalence relation?",
+      "answers": {
+        "a": "n",
+        "b": "n + 1",
+        "c": "n²",
+        "d": "2n"
+      },
+      "explanations": {
+        "a": "Correct! The minimum number of ordered pairs needed is exactly n, which occurs when each element is only related to itself. For example, if A = {1,2,3}, the minimal equivalence relation would be {(1,1), (2,2), (3,3)}. This satisfies reflexivity (each element relates to itself), symmetry (if (a,b) is in R, (b,a) is in R), and transitivity (if (a,b) and (b,c) are in R, (a,c) is in R).",
+        "b": "Incorrect! Having n+1 pairs would be more than necessary for a minimal equivalence relation. For example, with A = {1,2,3}, we only need 3 pairs {(1,1), (2,2), (3,3)}, not 4 pairs. Adding any more pairs would create non-minimal equivalence relations.",
+        "c": "Incorrect! n² represents the maximum possible pairs in a relation on a set of size n, not the minimum. For example, with A = {1,2,3}, n² = 9 would include all possible pairs {(1,1), (1,2), (1,3), (2,1), (2,2), (2,3), (3,1), (3,2), (3,3)}, which is far more than needed.",
+        "d": "Incorrect! 2n pairs would be too many for a minimal equivalence relation. For example, with A = {1,2,3}, 2n = 6 pairs would be excessive when we only need the 3 reflexive pairs {(1,1), (2,2), (3,3)} for the minimal case."
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Given a relation $R$ on set $A$, if $R$ is symmetric and transitive, what additional property must $R$ have to be an equivalence relation?",
+      "answers": {
+        "a": "Antisymmetric",
+        "b": "Reflexive",
+        "c": "Irreflexive",
+        "d": "Asymmetric"
+      },
+      "explanations": {
+        "a": "Incorrect! Antisymmetric property (if (a,b) and (b,a) are in R, then a = b) actually contradicts the symmetric property that R already has. For example, if R is symmetric and (1,2) ∈ R, then (2,1) must be in R, which would violate antisymmetry unless 1 = 2.",
+        "b": "Correct! To be an equivalence relation, R needs to be reflexive, symmetric, and transitive. Since R is already symmetric and transitive, it only needs reflexivity (every element must relate to itself). For example, if A = {1,2,3}, adding the pairs (1,1), (2,2), and (3,3) to the existing symmetric and transitive pairs would make R an equivalence relation.",
+        "c": "Incorrect! Irreflexive property (no element relates to itself) contradicts what's needed for an equivalence relation. For example, if A = {1,2} and R is symmetric and transitive, making it irreflexive would mean neither (1,1) nor (2,2) could be in R, preventing it from being an equivalence relation.",
+        "d": "Incorrect! Asymmetric property (if (a,b) is in R, then (b,a) is not in R) directly contradicts the symmetric property that R already has. For example, if (1,2) ∈ R and R is symmetric, then (2,1) must also be in R, which would violate asymmetry."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "If $R$ is an equivalence relation on set $A$, and $[a]$ denotes the equivalence class of $a$, which statement is always true?",
+      "answers": {
+        "a": "$[a] \\cap [b] = \\emptyset$ if $a \\neq b$",
+        "b": "$[a] = [b]$ if and only if $(a,b) \\in R$",
+        "c": "$[a] \\cup [b]$ is always an equivalence class",
+        "d": "$|[a]| = |[b]|$ for all $a,b \\in A$"
+      },
+      "explanations": {
+        "a": "Incorrect! Two different elements can belong to the same equivalence class even if they're not equal. For example, in modulo 3 arithmetic, [0] = {0,3,6,...} and [3] = {0,3,6,...} are the same class even though 0 ≠ 3. Their intersection is not empty because they're identical.",
+        "b": "Correct! This is a fundamental property of equivalence classes. Two elements share the same equivalence class if and only if they're related by R. For example, in modulo 2 arithmetic, [1] = [3] because (1,3) ∈ R (as 1 ≡ 3 (mod 2)), and conversely, if [x] = [y], then x and y must be related by the equivalence relation.",
+        "c": "Incorrect! The union of two equivalence classes is not necessarily an equivalence class. For example, in modulo 3 arithmetic, [0] ∪ [1] = {0,3,6,...} ∪ {1,4,7,...} is not an equivalence class as elements in this union aren't all related to each other.",
+        "d": "Incorrect! Different equivalence classes can have different sizes. For example, in the relation 'has the same sign' on integers, [0] = {0} has size 1, while [1] = {1,2,3,...} is infinite."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Let $R$ be an equivalence relation on an infinite set $A$. Which statement must be true about the cardinality of equivalence classes?",
+      "answers": {
+        "a": "All equivalence classes must be finite",
+        "b": "All equivalence classes must be infinite",
+        "c": "At least one equivalence class must be infinite",
+        "d": "The equivalence classes can be all finite or all infinite or mixed"
+      },
+      "explanations": {
+        "a": "Incorrect! In an infinite set, equivalence classes can be infinite. For example, in the relation 'has the same decimal part' on real numbers, [0.5] = {...,-1.5, -0.5, 0.5, 1.5, 2.5,...} is infinite.",
+        "b": "Incorrect! Even in an infinite set, equivalence classes can be finite. For example, in modulo 3 equivalence on integers, each class [0], [1], and [2] is infinite, but in 'has the same absolute value' on integers, [0] = {0} is finite.",
+        "c": "Incorrect! It's possible to have all finite equivalence classes even on an infinite set. For example, consider the relation 'leaves the same remainder when divided by 2' on integers. Each class [0] and [1] is infinite.",
+        "d": "Correct! The sizes of equivalence classes can vary greatly. For example: 1) All finite: 'has the same first digit' on real numbers. 2) All infinite: 'differs by an integer' on reals. 3) Mixed: 'has the same absolute value' on integers where [0] is finite but other classes are infinite."
+      },
+      "correctAnswer": "d",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "If $R$ and $S$ are equivalence relations on a set $A$, what can be said about their intersection $R \\cap S$?",
+      "answers": {
+        "a": "It must be an equivalence relation",
+        "b": "It is always reflexive but may not be transitive",
+        "c": "It is always symmetric but may not be reflexive",
+        "d": "It may not be an equivalence relation"
+      },
+      "explanations": {
+        "a": "Correct! The intersection of two equivalence relations is always an equivalence relation. Let's verify: 1) Reflexive: Since (a,a) is in both R and S, it's in their intersection. 2) Symmetric: If (a,b) is in both R and S, then (b,a) is in both (as they're both symmetric), so it's in the intersection. 3) Transitive: If (a,b) and (b,c) are in both R and S, then (a,c) is in both (as they're both transitive), so it's in the intersection.",
+        "b": "Incorrect! While the intersection is indeed reflexive (as both relations contain all (a,a) pairs), it's also symmetric and transitive. For example, if R and S are 'same parity' and 'same sign' on integers, their intersection preserves all three properties.",
+        "c": "Incorrect! The intersection is actually reflexive (as both relations contain all (a,a) pairs), symmetric, and transitive. For example, if R is 'same remainder mod 3' and S is 'same remainder mod 2', their intersection has all three properties.",
+        "d": "Incorrect! The intersection must be an equivalence relation as it inherits all three properties from both relations. For example, if R is 'same parity' and S is 'same sign', their intersection still relates numbers that have both the same parity and same sign."
+      },
+      "correctAnswer": "a",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "Let $R$ be an equivalence relation on a finite set $A$ with $n$ elements. If there are exactly $k$ distinct equivalence classes, what can be said about their sizes?",
+      "answers": {
+        "a": "All equivalence classes must have size n/k",
+        "b": "The sum of the sizes must equal n",
+        "c": "Each equivalence class must have at least k elements",
+        "d": "The product of the sizes must equal n"
+      },
+      "explanations": {
+        "a": "Incorrect! Equivalence classes can have different sizes while still forming a partition. For example, consider the relation 'has the same parity' on A = {1,2,3,4,5}. The odd numbers class {1,3,5} has size 3, while the even numbers class {2,4} has size 2. They don't both equal n/k = 5/2.",
+        "b": "Correct! Since equivalence classes form a partition of the set, each element must belong to exactly one class, so their sizes must sum to n. For example, if A = {1,2,3,4,5} and we partition by 'divisible by 2', we get {1,3,5} and {2,4}, with sizes 3 + 2 = 5. Or with 'divisible by 3', we get {1,2,4,5} and {3}, with sizes 4 + 1 = 5.",
+        "c": "Incorrect! Equivalence classes can be smaller than k. For example, with A = {1,2,3,4} and relation 'has the same parity', we have k = 2 classes but {2,4} has only 2 elements, which is not ≥ k. Similarly, with 'equals', each class has size 1, which is less than k = 4.",
+        "d": "Incorrect! The product of class sizes has no special meaning. For example, with A = {1,2,3,4} and 'has the same parity', the classes {1,3} and {2,4} have product 2 × 2 = 4, but with {1,2,3} and {4}, the product is 3 × 1 = 3. Both are valid partitions of a 4-element set."
+      },
+      "correctAnswer": "b",
+      "difficulty": "advanced"
     }
-    
   ]
 }
