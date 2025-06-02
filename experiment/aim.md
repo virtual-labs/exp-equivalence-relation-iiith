@@ -1,4 +1,3 @@
-### Aim of the experiment
 -  To understand definitions & properties of equivalence relations and equivalence classes. 
 
 - To make student recognize equivalence relation 

@@ -1,6 +1,6 @@
-# References
+### References and Further Reading
 
-## Books
+### Books
 1. Kenneth H. Rosen, "Discrete Mathematics and Its Applications", 7th Edition, McGraw-Hill Education, 2012.
    - Chapter 9: Relations
    - Sections 9.1-9.3: Relations and Their Properties, n-ary Relations, Equivalence Relations
@@ -17,7 +17,7 @@
    - Comprehensive coverage of discrete mathematics concepts
    - Detailed sections on relations and equivalence relations
 
-## Research Papers and Articles
+### Research Papers and Articles
 
 1. Birkhoff, G. (1940). "Lattice Theory", American Mathematical Society Colloquium Publications, Vol. 25.
    - Foundational work on lattice theory and its connection to equivalence relations
@@ -33,7 +33,7 @@
    - Detailed study of necklace equivalence classes
    - Connection to group theory and symmetry
 
-## Online Resources
+### Online Resources
 
 1. [Stanford Encyclopedia of Philosophy - Equivalence Relations](https://plato.stanford.edu/entries/relations-equivalence/)
    - Philosophical and mathematical foundations of equivalence relations
@@ -47,7 +47,7 @@
    - Standard reference for mathematical functions and their properties
    - Section on relations and equivalence classes
 
-## Additional Learning Materials
+### Additional Learning Materials
 
 1. **Interactive Tutorials**
    - MIT OpenCourseWare: Mathematics for Computer Science
@@ -61,7 +61,7 @@
    - Gilbert Strang's lectures on Linear Algebra (MIT OCW)
    - 3Blue1Brown series on Abstract Algebra
 
-## Software Tools
+### Software Tools
 
 1. **Mathematical Software**
    - Mathematica: For exploring relations and equivalence classes
@@ -72,7 +72,7 @@
    - Graphviz: For visualizing relations as directed graphs
    - GeoGebra: For interactive mathematical visualizations
 
-## Related Topics
+### Related Topics
 
 1. **Prerequisites**
    - Set Theory
@@ -86,7 +86,7 @@
    - Category Theory
    - Necklace Problems and Combinatorics
 
-## Standards and Guidelines
+### Standards and Guidelines
 
 1. IEEE/ACM Computing Curricula 2020
    - Discrete Structures
