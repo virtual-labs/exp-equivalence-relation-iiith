@@ -70,20 +70,20 @@
       "difficulty": "beginner"
     },
     {
-      "question": "Consider the congruence $ 45 \\equiv 3 $ (mod $ 7 $). Find the set of equivalence class representatives.",
+      "question": "Consider the congruence $ 45 \\equiv 3 \\pmod{7} $. Find the equivalence class containing 45 and 3 in the modulo 7 equivalence relation.",
       "answers": {
-        "a": "{.., 0, 7, 14, 28, ..}",
-        "b": "{.., -3, 0, 6, 21, ..}",
-        "c": "{.., 0, 4, 8, 16, ..}",
-        "d": "{.., 3, 8, 15, 21, ..}"
+        "a": "{.., -14, -7, 0, 7, 14, 21, 28, ...}",
+        "b": "{.., -10, -3, 4, 11, 18, 25, ...}",
+        "c": "{.., -11, -4, 3, 10, 17, 24, 31, ...}",
+        "d": "{.., 3, 8, 15, 21, ...}"
       },
       "explanations": {
-        "a": "Correct! In modulo 7, numbers that differ by multiples of 7 form equivalence classes. Since 45 ≡ 3 (mod 7), we're looking for the class containing 0. This is {... -14, -7, 0, 7, 14, ...} = {..., 0, 7, 14, 28, ...}.",
-        "b": "Incorrect! This sequence doesn't represent a valid equivalence class modulo 7 as the differences between consecutive terms aren't multiples of 7.",
-        "c": "Incorrect! This sequence represents numbers that differ by 4, not by 7 which is required for congruence modulo 7.",
-        "d": "Incorrect! While this includes some numbers congruent modulo 7, it's not the correct equivalence class for 45 ≡ 3 (mod 7)."
+        "a": "Incorrect! This is the equivalence class of 0 modulo 7, not the class containing 45.",
+        "b": "Incorrect! This sequence doesn't represent a valid equivalence class modulo 7 as elements don't differ by multiples of 7.",
+        "c": "Correct! Since 45 ≡ 3 (mod 7), both 45 and 3 belong to the same equivalence class. The class is {... -11, -4, 3, 10, 17, 24, 31, ...}, which consists of all integers that leave remainder 3 when divided by 7. We can verify: 45 = 6×7 + 3, so 45 ≡ 3 (mod 7).",
+        "d": "Incorrect! While this includes 3, the pattern breaks as 8 - 3 = 5 (not 7), 15 - 8 = 7 (correct), but then 21 - 15 = 6 (not 7), so this is not a valid equivalence class."
       },
-      "correctAnswer": "a",
+      "correctAnswer": "c",
       "difficulty": "beginner"
     },
     {
@@ -129,16 +129,16 @@
         "d": "$ \\lceil \\frac{n(n+1)}{2} \\rceil $"
       },
       "explanations": {
-        "a": "Incorrect! With n equivalence classes, we need at least n reflexive pairs (one for each class), but this isn't enough as we also need symmetric and transitive pairs.",
-        "b": "Incorrect! 2n pairs would not be enough to ensure transitivity within each equivalence class, especially for classes with more than 2 elements.",
-        "c": "Incorrect! n² would be too many pairs for the minimum case. Consider when each equivalence class contains exactly one element - we only need n reflexive pairs.",
-        "d": "Correct! The minimum occurs when each equivalence class contains exactly one element except possibly one class with two elements (if n doesn't divide |A|). Each element needs a reflexive pair, and elements in the same class need symmetric and transitive pairs. For example, with n=3 classes {{1},{2},{3}}, we need exactly 3 pairs (1,1),(2,2),(3,3)."
+        "a": "Correct! The minimum occurs when each equivalence class contains exactly one element. In this case, the equivalence relation consists only of the reflexive pairs: (1,1), (2,2), ..., (n,n), giving exactly n ordered pairs. This satisfies reflexivity (each element relates to itself), symmetry (reflexive pairs are trivially symmetric), and transitivity (only reflexive pairs exist, so transitivity is satisfied). For example, with a 3-element set {1,2,3} partitioned into 3 classes {{1},{2},{3}}, we need exactly 3 pairs: {(1,1), (2,2), (3,3)}.",
+        "b": "Incorrect! 2n pairs would be more than necessary for the minimum case. Even with reflexive pairs plus some additional symmetric pairs, we'd need fewer than 2n pairs when each class has only one element.",
+        "c": "Incorrect! n² would be too many pairs. This would represent the maximum when all elements are equivalent (universal relation), not the minimum case.",
+        "d": "Incorrect! This formula overcounts the minimum number of pairs. The minimum is simply n reflexive pairs, not a more complex formula."
       },
-      "correctAnswer": "d",
+      "correctAnswer": "a",
       "difficulty": "advanced"
     },
     {
-      "question": "Let $ R $ be an equivalence relation on a set $ A $ where $ |A| = 10 $. If $ R $ has exactly 4 equivalence classes and one class contains 4 elements, what is the maximum possible size of the second largest equivalence class?",
+      "question": "Let $ R $ be an equivalence relation on a set $ A $ where $ |A| = 10 $. If $ R $ has exactly 4 equivalence classes and exactly one class contains exactly 4 elements, what is the maximum possible size of the second largest equivalence class?",
       "answers": {
         "a": "4",
         "b": "3",
@@ -146,10 +146,10 @@
         "d": "1"
       },
       "explanations": {
-        "a": "Incorrect! If another class had 4 elements, the total elements would be at least 8 + remaining 2 classes = minimum 10 elements, exceeding |A| = 10.",
-        "b": "Correct! With one class of 4 elements and |A| = 10, the remaining 6 elements must be distributed among 3 classes. The maximum size possible for the second largest class is 3, as in distribution {4,3,2,1} which sums to 10.",
-        "c": "Incorrect! We can achieve a larger second class. Consider distribution {4,3,2,1} which satisfies all conditions with second class having 3 elements.",
-        "d": "Incorrect! This is too small. We can have a second class of size 3 while still satisfying all conditions with distribution {4,3,2,1}."
+        "a": "Incorrect! If another class also had exactly 4 elements, that would violate the constraint that exactly one class contains 4 elements.",
+        "b": "Correct! With exactly one class of size 4, |A| = 10, and 4 classes total, the remaining 6 elements must be distributed among 3 classes. To maximize the second largest class, we should distribute as {4, 3, 2, 1}, which gives the second largest size as 3 while satisfying all constraints.",
+        "c": "Incorrect! We can achieve a larger second class. The maximum is 3, not 2, as shown by the distribution {4, 3, 2, 1}.",
+        "d": "Incorrect! This is too small. We can have a second class of size 3 while still satisfying all constraints."
       },
       "correctAnswer": "b",
       "difficulty": "intermediate"
@@ -172,7 +172,7 @@
       "difficulty": "intermediate"
     },
     {
-      "question": "Let $ R $ be an equivalence relation on the set of all non-empty strings over alphabet $ {a,b} $. For strings $ x $ and $ y $, define $ xRy $ if and only if $ x $ can be obtained from $ y $ by a finite number of cyclic shifts. For string $ 'ababab' $, what is $ |[ababab]_R| $?",
+      "question": "Let $ R $ be an equivalence relation on the set of all non-empty strings over alphabet $ \\{a,b\\} $. For strings $ x $ and $ y $, define $ xRy $ if and only if $ x $ can be obtained from $ y $ by a finite number of cyclic shifts. For string $ 'ababab' $, what is $ |[ababab]_R| $?",
       "answers": {
         "a": "6",
         "b": "3",
@@ -180,12 +180,12 @@
         "d": "1"
       },
       "explanations": {
-        "a": "Incorrect! While 'ababab' has length 6, cyclic shifts produce patterns that repeat before reaching 6 distinct strings due to the repetitive nature of the string.",
-        "b": "Correct! For 'ababab', cyclic shifts produce: 'ababab', 'bababa', 'ababab', 'bababa', etc. Due to the repeating pattern 'ab', we only get 3 unique strings: 'ababab', 'bababa', 'ababab'. This is because the string has period 2.",
-        "c": "Incorrect! The equivalence class contains more than 2 elements. Consider shifts: 'ababab' → 'bababa' → 'ababab', giving 3 unique strings.",
-        "d": "Incorrect! The string 'ababab' can produce different strings through cyclic shifts (e.g., 'bababa'), so its equivalence class has more than one element."
+        "a": "Incorrect! While 'ababab' has length 6, cyclic shifts do not produce 6 distinct strings. Due to the repeating pattern 'ab', the string has period 2, which limits the number of unique cyclic shifts.",
+        "b": "Incorrect! For 'ababab', the cyclic shifts produce: shift by 0: 'ababab', shift by 1: 'bababa', shift by 2: 'ababab' (repeats), shift by 3: 'bababa' (repeats), etc. Since the string has period 2, only 2 unique strings are generated, not 3.",
+        "c": "Correct! For 'ababab', cyclic shifts produce exactly 2 unique strings: 'ababab' and 'bababa'. This is because the string has period 2. Each shift either keeps it as 'ababab' (even shifts) or transforms it to 'bababa' (odd shifts). The equivalence class contains these 2 representatives.",
+        "d": "Incorrect! The string 'ababab' can produce at least 2 different strings through cyclic shifts ('ababab' and 'bababa'), so its equivalence class has more than one element."
       },
-      "correctAnswer": "b",
+      "correctAnswer": "c",
       "difficulty": "advanced"
     }
   ]

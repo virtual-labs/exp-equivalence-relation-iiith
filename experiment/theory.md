@@ -54,6 +54,8 @@ Now, we will understand the meaning of some terms related to equivalence relatio
 
 - Equivalence Class - An equivalence class is a subset $ B $ of $ A $ such that $ (a, b) \in R $ for $ \forall a, b \in B $ and $ a, b $ cannot be outside of $ B $. Mathematically, an equivalence class of $ a $ is denoted as $ [a] = \{x \in A: (a, x) \in R\} $ which contains all elements of $ A $ which are related to $ a $. All elements of $ A $ equivalent to each other belong to the same equivalence class. In other words, all elements belonging to the same equivalence class are equivalent to each other.
 
+- Rank of an Equivalence Relation - The rank of an equivalence relation $ R $ on a set $ A $ is the number of distinct equivalence classes induced by $ R $. For example, if $ R $ partitions set $ A $ into 5 disjoint equivalence classes, then the rank of $ R $ is 5. This is also sometimes referred to as the number of equivalence classes or the index of the equivalence relation.
+
 - Partition - A partition of set $ A $ is a non-empty set of disjoint subsets of $ A $ such that no element of $ A $ is in two subsets of $ A $ and elements belonging to the same subset are related to each other. The union of subsets in the partition is equal to set $ A $.
 
 - Quotient Set - A quotient set is a set of all equivalence classes of an equivalence relation denoted by $ A/R = \{[a]: a \in A\} $

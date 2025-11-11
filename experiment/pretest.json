@@ -2,7 +2,7 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "Relation $ R $ is defined as $ R = { \\ ( \\ a, b ) \\ \\mid ( \\ a - b ) \\ = k_{m} for some fixed integer m and a, b, k \\in z \\ } $, then $ R $ is",
+      "question": "Relation $ R $ is defined as $ R = \\{(a, b) \\mid (a - b) = k \\cdot m \\text{ for some fixed integer } m \\text{ and } a, b, k \\in \\mathbb{Z}\\} $, then $ R $ is",
       "answers": {
         "a": "Reflective but not symmetric",
         "b": "Symmetric but not transitive",
@@ -36,7 +36,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "Suppose a relation $ R = {(3, 3), (5, 5), (5, 3), (5, 5), (6, 6)} $ on $ S = {3, 5, 6} $. Here $ R $ is known as",
+      "question": "Suppose a relation $ R = \\{(3, 3), (5, 5), (5, 3), (3, 5), (6, 6)\\} $ on $ S = \\{3, 5, 6\\} $. Here $ R $ is known as",
       "answers": {
         "a": "equivalence relation",
         "b": "reflexive relation",
@@ -44,7 +44,7 @@
         "d": "transitive relation"
       },
       "explanations": {
-        "a": "Correct! This relation satisfies all three properties of an equivalence relation. Let's verify: 1) Reflexive: (3,3), (5,5), and (6,6) are all in R. 2) Symmetric: (5,3) ∈ R implies (3,5) must be in R. 3) Transitive: if (a,b) and (b,c) are in R, then (a,c) is in R. The equivalence classes are {3,5} and {6}.",
+        "a": "Correct! This relation satisfies all three properties of an equivalence relation. Let's verify: 1) Reflexive: (3,3), (5,5), and (6,6) are all in R. 2) Symmetric: (5,3) ∈ R and (3,5) ∈ R, showing symmetry. Similarly all pairs satisfy symmetry. 3) Transitive: if (a,b) and (b,c) are in R, then (a,c) is in R. The equivalence classes are {3,5} and {6}.",
         "b": "Incorrect! While this relation is indeed reflexive (as (3,3), (5,5), and (6,6) are all in R), it also has additional properties. For example, it's symmetric because whenever (a,b) is in R, (b,a) is also in R, making it more than just a reflexive relation.",
         "c": "Incorrect! While this relation is symmetric (as shown by the presence of both (5,3) and (3,5)), it has more properties than just symmetry. For example, it's also reflexive as shown by (3,3), (5,5), and (6,6), making it more than just a symmetric relation.",
         "d": "Incorrect! While this relation is transitive (if we follow any two related pairs, the endpoints are related), it has more properties. For example, it's also reflexive and symmetric, making it more than just a transitive relation."
