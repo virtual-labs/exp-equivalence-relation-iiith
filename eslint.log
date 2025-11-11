@@ -1,0 +1,21 @@
+
+/home/runner/work/exp-equivalence-relation-iiith/exp-equivalence-relation-iiith/experiment/simulation/equivalence.js
+  458:49  warning  'i' is defined but never used                     no-unused-vars
+  589:10  warning  'updateBeadCount' is defined but never used       no-unused-vars
+  595:10  warning  'updateColorCount' is defined but never used      no-unused-vars
+  601:10  warning  'generateRandom' is defined but never used        no-unused-vars
+  607:10  warning  'rotateNecklace' is defined but never used        no-unused-vars
+  613:10  warning  'reflectNecklace' is defined but never used       no-unused-vars
+  619:10  warning  'newChallenge' is defined but never used          no-unused-vars
+  625:10  warning  'answerEquivalent' is defined but never used      no-unused-vars
+  631:10  warning  'answerNotEquivalent' is defined but never used   no-unused-vars
+  637:10  warning  'resetStats' is defined but never used            no-unused-vars
+  643:10  warning  'changeDifficultyMode' is defined but never used  no-unused-vars
+
+/home/runner/work/exp-equivalence-relation-iiith/exp-equivalence-relation-iiith/experiment/simulation/mobile-detection.js
+  393:7   warning  'mobileDetection' is assigned a value but never used  no-unused-vars
+  396:38  warning  'module' is not defined                               no-undef
+  397:3   warning  'module' is not defined                               no-undef
+
+✖ 14 problems (0 errors, 14 warnings)
+

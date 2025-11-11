@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Necklace Equivalence Relations - Discrete Mathematics</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="mobile-detection.js"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <div class="max-w-7xl mx-auto px-6 pb-16 space-y-12">
+
+    <!-- Challenge Question Section -->
+    <section class="bg-blue-50 p-6 rounded-xl shadow-lg border border-blue-200">
+      <h3 class="font-semibold text-blue-800 mb-3 text-xl">Challenge Question</h3>
+      <p id="challengeQuestion" class="text-gray-700 mb-4 text-lg">
+        Click "New Challenge" to start!
+      </p>
+      <div class="flex flex-wrap gap-3">
+        <button onclick="answerEquivalent()" id="yesBtn" class="btn bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold disabled:bg-gray-400" disabled>
+          Yes, Equivalent
+        </button>
+        <button onclick="answerNotEquivalent()" id="noBtn" class="btn bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg font-semibold disabled:bg-gray-400" disabled>
+          No, Not Equivalent
+        </button>
+        <button onclick="newChallenge()" class="btn bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold">
+          New Challenge
+        </button>
+      </div>
+      <div id="feedback" class="mt-4 p-3 rounded-lg hidden"></div>
+    </section>
+
+    <section id="game-section" class="bg-white p-6 rounded-xl shadow-lg">
+      <div class="grid lg:grid-cols-4 gap-6">
+        <!-- Main Game Area -->
+        <div class="lg:col-span-3">
+          <div class="game-container">
+            <canvas id="necklaceCanvas"></canvas>
+          </div>
+        </div>
+
+        <!-- Right Side Controls -->
+        <div class="lg:col-span-1 space-y-4">
+          <!-- Transformations -->
+          <div class="bg-green-50 p-4 rounded-lg border border-green-200">
+            <h3 class="font-semibold text-green-800 mb-3 text-sm">Transformations</h3>
+            <div class="space-y-2">
+              <button onclick="rotateNecklace()" class="btn w-full bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-3 rounded text-sm">
+                Rotate →
+              </button>
+              <button onclick="reflectNecklace()" class="btn w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-3 rounded text-sm">
+                Reflect ↔
+              </button>
+            </div>
+          </div>
+
+          <!-- Transformation Log -->
+          <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+            <h3 class="font-semibold text-gray-800 mb-3 text-sm">Transformation Log</h3>
+            <div id="transformLog" class="move-history max-h-32 text-xs bg-white rounded border p-2">
+              <p class="text-xs text-gray-600">No transformations yet</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Floating Info Button -->
+    <div class="floating-button primary" id="infoButton">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z" />
+      </svg>
+    </div>
+
+    <!-- Floating Settings Button -->
+    <div class="floating-button secondary" id="settingsButton">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.325.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 0 1 1.37.49l1.296 2.247a1.125 1.125 0 0 1-.26 1.431l-1.003.827c-.293.241-.438.613-.43.992a6.759 6.759 0 0 1 0 .255c-.008.378.137.75.43.991l1.004.827c.424.35.534.955.26 1.43l-1.298 2.247a1.125 1.125 0 0 1-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.57 6.57 0 0 1-.22.128c-.331.183-.581.495-.644.869l-.213 1.281c-.09.543-.56.94-1.11.94h-2.594c-.55 0-1.019-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 0 1-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 0 1-1.369-.49l-1.297-2.247a1.125 1.125 0 0 1 .26-1.431l1.004-.827c.292-.24.437-.613.43-.991a6.932 6.932 0 0 1 0-.255c.007-.38-.138-.751-.43-.992l-1.004-.827a1.125 1.125 0 0 1-.26-1.43l1.297-2.247a1.125 1.125 0 0 1 1.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.086.22-.128.332-.183.582-.495.644-.869l.214-1.28Z" />
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+      </svg>
+    </div>
+    
+    <!-- Floating Info Panel -->
+    <div class="floating-panel" id="infoPanel">
+      <div class="floating-panel-header">
+        <h3 class="panel-title">Instructions</h3>
+        <div class="floating-panel-close" id="infoPanelClose">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+          </svg>
+        </div>
+      </div>
+      <div class="floating-panel-content space-y-4">
+        <div class="bg-orange-50 p-3 rounded-lg">
+          <h3 class="font-semibold text-sm text-orange-800 mb-2">How to Use</h3>
+          <div class="text-xs space-y-1 text-gray-600">
+            <p>• Two necklaces are equivalent if one can be transformed into the other through rotations and/or reflections</p>
+            <p>• Use transformation buttons to explore</p>
+            <p>• Answer challenges to test understanding</p>
+            <p>• Choose Easy mode for direct colors or Hard mode for a different color-to-color mapping</p>
+          </div>
+        </div>
+        <div class="bg-indigo-50 p-3 rounded-lg">
+          <h3 class="font-semibold text-sm text-indigo-800 mb-2">Difficulty Modes</h3>
+          <div class="text-xs space-y-1 text-gray-600">
+            <p>• <strong>Easy:</strong> Colors displayed directly on beads</p>
+            <p>• <strong>Hard:</strong> Each Color is mapped to a different color.</p>
+            <p>• In Hard mode, use the color mapping guide to decode</p>
+          </div>
+        </div>
+        <div class="bg-green-50 p-3 rounded-lg">
+          <h3 class="font-semibold text-sm text-green-800 mb-2">Controls</h3>
+          <div class="text-xs space-y-1 text-gray-600">
+            <p>• Rotate: Rotate the necklace one position</p>
+            <p>• Reflect: Mirror the necklace</p>
+            <p>• Reset: Reset statistics and pattern</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Floating Settings Panel -->
+    <div class="floating-panel" id="settingsPanel">
+      <div class="floating-panel-header">
+        <h3 class="panel-title">Settings</h3>
+        <div class="floating-panel-close" id="settingsPanelClose">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+          </svg>
+        </div>
+      </div>
+      <div class="floating-panel-content space-y-4">
+        <!-- Difficulty Mode Selection -->
+        <div class="bg-gradient-to-br from-purple-50 to-indigo-50 p-4 rounded-lg border border-purple-200">
+          <h3 class="font-semibold text-purple-800 mb-3 text-sm">Difficulty Mode</h3>
+          <div class="space-y-2">
+            <label class="flex items-center">
+              <input type="radio" name="difficultyMode" value="easy" checked onchange="changeDifficultyMode()" class="mr-2 accent-purple-600">
+              <span class="text-sm font-medium text-gray-700">Easy Mode</span>
+            </label>
+            <p class="text-xs text-gray-600 ml-6 mb-2">Direct color representation</p>
+            <label class="flex items-center">
+              <input type="radio" name="difficultyMode" value="hard" onchange="changeDifficultyMode()" class="mr-2 accent-purple-600">
+              <span class="text-sm font-medium text-gray-700">Hard Mode</span>
+            </label>
+            <p class="text-xs text-gray-600 ml-6"> Different Color Matching</p>
+          </div>
+        </div>
+
+        <!-- Color Mapping (for Hard Mode) -->
+        <div id="colorMappingPanel" class="bg-amber-50 p-4 rounded-lg border border-amber-200 hidden">
+          <h3 class="font-semibold text-amber-800 mb-3 text-sm">Color Mapping</h3>
+          <div id="colorMappingDisplay" class="space-y-2 text-xs">
+            <!-- Mapping will be dynamically generated -->
+          </div>
+        </div>
+
+        <!-- Parameters -->
+        <div class="bg-indigo-50 p-4 rounded-lg border border-indigo-200">
+          <h3 class="font-semibold text-indigo-800 mb-3 text-sm">Parameters</h3>
+          <div class="space-y-3">
+            <div>
+              <label class="block text-xs font-medium text-gray-700 mb-1">
+                Beads: <span id="beadCountValue">12</span>
+              </label>
+              <input type="range" id="beadCountSlider" min="6" max="12" value="12" step="1" 
+                     class="w-full accent-indigo-600" onchange="updateBeadCount()">
+            </div>
+            <div>
+              <label class="block text-xs font-medium text-gray-700 mb-1">
+                Colors: <span id="colorCountValue">4</span>
+              </label>
+              <input type="range" id="colorCountSlider" min="2" max="8" value="4" step="1" 
+                     class="w-full accent-indigo-600" onchange="updateColorCount()">
+            </div>
+            <button onclick="resetStats()" class="btn w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-3 rounded text-sm">
+              Reset
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Theory Section -->
+    <section class="grid md:grid-cols-2 gap-8">
+      <div class="card bg-white p-6 rounded-xl shadow">
+        <h2 class="text-2xl font-semibold text-indigo-700 mb-3">Equivalence Relations</h2>
+        <div class="space-y-3 text-sm">
+          <p class="text-gray-700">An equivalence relation ~ on a set S must satisfy:</p>
+          <ol class="list-decimal pl-6 space-y-2 text-gray-700">
+            <li><strong>Reflexive:</strong> a ~ a for all a ∈ S</li>
+            <li><strong>Symmetric:</strong> If a ~ b, then b ~ a</li>
+            <li><strong>Transitive:</strong> If a ~ b and b ~ c, then a ~ c</li>
+          </ol>
+          <div class="bg-gray-100 p-3 rounded mt-4">
+            <p class="font-medium text-gray-800 mb-2">Necklace Equivalence:</p>
+            <p class="text-gray-700">Two necklaces are equivalent if one can be obtained from the other by:</p>
+            <ul class="list-disc pl-4 mt-2 space-y-1">
+              <li>Rotation (cyclic permutation)</li>
+              <li>Reflection (mirror image)</li>
+              <li>Combination of both</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card bg-white p-6 rounded-xl shadow">
+        <h2 class="text-2xl font-semibold text-indigo-700 mb-3">Burnside's Lemma</h2>
+        <div class="space-y-3 text-sm">
+          <div>
+            <p class="font-medium text-gray-800">Number of equivalence classes:</p>
+            <p class="text-gray-700">|X/G| = (1/|G|) Σ |Fix(g)|</p>
+          </div>
+          <div class="bg-gray-100 p-3 rounded">
+            <p class="font-medium text-gray-800 mb-2">For n-bead, k-color necklaces:</p>
+            <ul class="space-y-1 text-gray-700">
+              <li>Rotations: n elements</li>
+              <li>Reflections: n elements</li>
+              <li>Total group size: 2n</li>
+            </ul>
+            <p class="mt-2 text-gray-700">Number of distinct necklaces involves counting fixed points under each symmetry.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="equivalence.js"></script>
+<script src="../assets/js/iframeResize.js"></script>
+        
+        </body>
+</html>
