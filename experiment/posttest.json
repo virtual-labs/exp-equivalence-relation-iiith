@@ -2,38 +2,191 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "Suppose $ A $ is a finite set with $ n $ elements. The number of elements and the rank of the largest equivalence relation on $ A $ are",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "$ {n,1} $",
+        "b": "$ {n,n} $",
+        "c": "$ {n^2,1} $",
+        "d": "$ {1,n^2} $"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
-      "correctAnswer": "a",
-      "difficulty": "beginner"
-    },
-    {
-      "question": "This is a Sample Question 2?",
-      "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
-      },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "Incorrect! For a set with n elements, the number of possible ordered pairs is n², not n. For example, with A = {1,2}, possible pairs are (1,1), (1,2), (2,1), (2,2), giving 4 = 2² elements.",
+        "b": "Incorrect! While n is the size of the set, the largest equivalence relation contains all possible pairs (n²), and its rank (number of equivalence classes) would be 1, not n. For example, with A = {1,2}, the universal relation has 4 pairs but only 1 class.",
+        "c": "Correct! For a set with n elements, the largest equivalence relation is the universal relation containing all n² possible pairs, and it has rank 1 (all elements in one class). For example, with A = {1,2,3}, we have 9 pairs and all elements are equivalent.",
+        "d": "Incorrect! The order is reversed. The number of elements is n² (all possible pairs), and the rank is 1 (one equivalence class containing all elements), not the other way around."
       },
       "correctAnswer": "c",
       "difficulty": "beginner"
+    },
+    {
+      "question": "Determine the number of equivalence classes that can be described by the set $ {2, 4, 5} $.",
+      "answers": {
+        "a": "$ 125 $",
+        "b": "$ 5 $",
+        "c": "$ 16 $",
+        "d": "$ 72 $"
+      },
+      "explanations": {
+        "a": "Incorrect! 125 is far too large. For a set with 3 elements, the total number of possible relations is 2⁹ (as there are 9 possible pairs), and only some of these are equivalence relations.",
+        "b": "Correct! For set B = {2,4,5}, the possible partitions are: {{2,4,5}}, {{2},{4,5}}, {{4},{2,5}}, {{5},{2,4}}, {{2},{4},{5}}. Each partition corresponds to exactly one equivalence relation, so there are 5 possible equivalence relations.",
+        "c": "Incorrect! 16 is not the correct count. While 2⁴ = 16 represents some binary choice, it's not related to the number of possible equivalence relations on this 3-element set.",
+        "d": "Incorrect! 72 is too large. The number of equivalence relations on a 3-element set must be less than the total number of possible relations (2⁹ = 512)."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "For $ a, b \\in Z $ defined $ a \\mid b $ to mean that $ a $ divides $ b $ is a relation which does not satisfy ___________",
+      "answers": {
+        "a": "irreflexive and symmetric relation",
+        "b": "reflexive relation and symmetric relation",
+        "c": "transitive relation",
+        "d": "symmetric relation"
+      },
+      "explanations": {
+        "a": "Incorrect! While the relation is not irreflexive (as most numbers divide themselves), the main issue is that it's not symmetric. For example, 2|4 but 4∤2.",
+        "b": "Correct! The division relation fails both reflexivity and symmetry: 1) Not reflexive because 0∤0 (0 doesn't divide 0). 2) Not symmetric because if a|b, b|a may not hold (e.g., 2|4 but 4∤2).",
+        "c": "Incorrect! The division relation is actually transitive. If a|b and b|c, then a|c. For example, if 2|4 and 4|8, then 2|8.",
+        "d": "Incorrect! While the relation is indeed not symmetric, it also fails reflexivity. The question asks for all properties that fail."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Determine the partitions of the set $ {3, 4, 5, 6, 7} $ from the following subsets.",
+      "answers": {
+        "a": "{3,5}, {3,6,7}, {4,5,6}",
+        "b": "{3}, {4,6}, {5}, {7}",
+        "c": "{3,4,6}, {7}",
+        "d": "{5,6}, {5,7}"
+      },
+      "explanations": {
+        "a": "Incorrect! These subsets don't form a partition because: 1) Elements 3, 5, and 6 appear in multiple sets (not disjoint). 2) The union doesn't cover all elements of the original set.",
+        "b": "Correct! This is a valid partition because: 1) All subsets are disjoint (no element appears twice). 2) The union covers the entire set {3,4,5,6,7}. 3) No subset is empty.",
+        "c": "Incorrect! This is not a partition because: 1) Element 5 is missing (union doesn't equal the original set). 2) Even though the sets are disjoint, they don't include all elements.",
+        "d": "Incorrect! This fails to be a partition because: 1) Element 5 appears in both sets (not disjoint). 2) Elements 3 and 4 are missing (incomplete coverage)."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Consider the congruence $ 45 \\equiv 3 \\pmod{7} $. Find the equivalence class containing 45 and 3 in the modulo 7 equivalence relation.",
+      "answers": {
+        "a": "{.., -14, -7, 0, 7, 14, 21, 28, ...}",
+        "b": "{.., -10, -3, 4, 11, 18, 25, ...}",
+        "c": "{.., -11, -4, 3, 10, 17, 24, 31, ...}",
+        "d": "{.., 3, 8, 15, 21, ...}"
+      },
+      "explanations": {
+        "a": "Incorrect! This is the equivalence class of 0 modulo 7, not the class containing 45.",
+        "b": "Incorrect! This sequence doesn't represent a valid equivalence class modulo 7 as elements don't differ by multiples of 7.",
+        "c": "Correct! Since 45 ≡ 3 (mod 7), both 45 and 3 belong to the same equivalence class. The class is {... -11, -4, 3, 10, 17, 24, 31, ...}, which consists of all integers that leave remainder 3 when divided by 7. We can verify: 45 = 6×7 + 3, so 45 ≡ 3 (mod 7).",
+        "d": "Incorrect! While this includes 3, the pattern breaks as 8 - 3 = 5 (not 7), 15 - 8 = 7 (correct), but then 21 - 15 = 6 (not 7), so this is not a valid equivalence class."
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Let $ R $ be an equivalence relation on a set $ A $. If $ [a] $ and $ [b] $ are two equivalence classes of $ R $, which statement must be true?",
+      "answers": {
+        "a": "$ [a] \\cap [b] $ is always non-empty",
+        "b": "$ [a] \\cup [b] $ is always an equivalence class",
+        "c": "Either $ [a] = [b] $ or $ [a] \\cap [b] = \\emptyset $",
+        "d": "$ |[a]| = |[b]| $ always holds"
+      },
+      "explanations": {
+        "a": "Incorrect! Two different equivalence classes must be disjoint. For example, in modulo 2 arithmetic, [0] = {0,2,4,...} and [1] = {1,3,5,...} have empty intersection.",
+        "b": "Incorrect! The union of two equivalence classes is generally not an equivalence class. For example, in 'same parity' relation, [2]∪[3] = {even numbers}∪{odd numbers} = ℤ is not an equivalence class.",
+        "c": "Correct! This is a fundamental property of equivalence relations: equivalence classes either coincide completely or are disjoint. For example, in modulo 3, either [1]=[4] (as 1≡4 mod 3) or [1]∩[2]=∅ (as 1≢2 mod 3).",
+        "d": "Incorrect! Equivalence classes can have different sizes. For example, in the relation 'has same absolute value' on integers, [0] = {0} has size 1, while [1] = {1,-1} has size 2."
+      },
+      "correctAnswer": "c",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "If $ R $ is an equivalence relation on an infinite set $ X $ and $ S $ is an equivalence relation on an infinite set $ Y $, what can be said about their Cartesian product $ R \\times S $ on $ X \\times Y $?",
+      "answers": {
+        "a": "It is always an equivalence relation",
+        "b": "It is never an equivalence relation",
+        "c": "It is an equivalence relation if and only if $ X = Y $",
+        "d": "It is an equivalence relation if and only if $ R = S $"
+      },
+      "explanations": {
+        "a": "Correct! R×S is always an equivalence relation on X×Y. Let's verify: 1) Reflexive: ((x₁,y₁),(x₁,y₁)) ∈ R×S as (x₁,x₁) ∈ R and (y₁,y₁) ∈ S. 2) Symmetric: If ((x₁,y₁),(x₂,y₂)) ∈ R×S, then (x₂,x₁) ∈ R and (y₂,y₁) ∈ S, so ((x₂,y₂),(x₁,y₁)) ∈ R×S. 3) Transitive: Similar chain argument works.",
+        "b": "Incorrect! The Cartesian product of equivalence relations preserves all three properties (reflexivity, symmetry, transitivity). For example, if R is 'same parity' and S is 'same sign', R×S relates pairs with both same parity and same sign.",
+        "c": "Incorrect! R×S is an equivalence relation even when X≠Y. For example, R could be 'same parity' on integers and S could be 'same sign' on reals.",
+        "d": "Incorrect! R×S is an equivalence relation even when R≠S. For example, R could be congruence modulo 2 and S could be congruence modulo 3."
+      },
+      "correctAnswer": "a",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "Let $ R $ be an equivalence relation on a set $ A $ with exactly $ n $ equivalence classes. What is the minimum possible size of $ R $ as a set of ordered pairs?",
+      "answers": {
+        "a": "$ n $",
+        "b": "$ 2n $",
+        "c": "$ n^2 $",
+        "d": "$ \\lceil \\frac{n(n+1)}{2} \\rceil $"
+      },
+      "explanations": {
+        "a": "Correct! The minimum occurs when each equivalence class contains exactly one element. In this case, the equivalence relation consists only of the reflexive pairs: (1,1), (2,2), ..., (n,n), giving exactly n ordered pairs. This satisfies reflexivity (each element relates to itself), symmetry (reflexive pairs are trivially symmetric), and transitivity (only reflexive pairs exist, so transitivity is satisfied). For example, with a 3-element set {1,2,3} partitioned into 3 classes {{1},{2},{3}}, we need exactly 3 pairs: {(1,1), (2,2), (3,3)}.",
+        "b": "Incorrect! 2n pairs would be more than necessary for the minimum case. Even with reflexive pairs plus some additional symmetric pairs, we'd need fewer than 2n pairs when each class has only one element.",
+        "c": "Incorrect! n² would be too many pairs. This would represent the maximum when all elements are equivalent (universal relation), not the minimum case.",
+        "d": "Incorrect! This formula overcounts the minimum number of pairs. The minimum is simply n reflexive pairs, not a more complex formula."
+      },
+      "correctAnswer": "a",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "Let $ R $ be an equivalence relation on a set $ A $ where $ |A| = 10 $. If $ R $ has exactly 4 equivalence classes and exactly one class contains exactly 4 elements, what is the maximum possible size of the second largest equivalence class?",
+      "answers": {
+        "a": "4",
+        "b": "3",
+        "c": "2",
+        "d": "1"
+      },
+      "explanations": {
+        "a": "Incorrect! If another class also had exactly 4 elements, that would violate the constraint that exactly one class contains 4 elements.",
+        "b": "Correct! With exactly one class of size 4, |A| = 10, and 4 classes total, the remaining 6 elements must be distributed among 3 classes. To maximize the second largest class, we should distribute as {4, 3, 2, 1}, which gives the second largest size as 3 while satisfying all constraints.",
+        "c": "Incorrect! We can achieve a larger second class. The maximum is 3, not 2, as shown by the distribution {4, 3, 2, 1}.",
+        "d": "Incorrect! This is too small. We can have a second class of size 3 while still satisfying all constraints."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "In a group of people, define relation $ R $ where $ aRb $ if and only if $ a $ and $ b $ share the same birth month and birth day (ignoring year). Which property about $ R $ must be true?",
+      "answers": {
+        "a": "Each equivalence class must have the same size",
+        "b": "There must be exactly 12 equivalence classes",
+        "c": "There must be exactly 365 equivalence classes",
+        "d": "The number of equivalence classes must be less than or equal to 366"
+      },
+      "explanations": {
+        "a": "Incorrect! Equivalence classes can have different sizes as different numbers of people can share the same birthday.",
+        "b": "Incorrect! This confuses months with actual possible birthdays. There are 365 (or 366 including Feb 29) possible birth month-day combinations.",
+        "c": "Incorrect! While there are 365 regular days, we must account for leap years (February 29), making 366 the upper bound.",
+        "d": "Correct! Since R groups people by birth month and day: 1) Each person belongs to exactly one class (their birthday). 2) The maximum number of possible birthdays is 366 (including Feb 29). 3) Some classes might be empty if no one has that birthday."
+      },
+      "correctAnswer": "d",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Let $ R $ be an equivalence relation on the set of all non-empty strings over alphabet $ \\{a,b\\} $. For strings $ x $ and $ y $, define $ xRy $ if and only if $ x $ can be obtained from $ y $ by a finite number of cyclic shifts. For string $ 'ababab' $, what is $ |[ababab]_R| $?",
+      "answers": {
+        "a": "6",
+        "b": "3",
+        "c": "2",
+        "d": "1"
+      },
+      "explanations": {
+        "a": "Incorrect! While 'ababab' has length 6, cyclic shifts do not produce 6 distinct strings. Due to the repeating pattern 'ab', the string has period 2, which limits the number of unique cyclic shifts.",
+        "b": "Incorrect! For 'ababab', the cyclic shifts produce: shift by 0: 'ababab', shift by 1: 'bababa', shift by 2: 'ababab' (repeats), shift by 3: 'bababa' (repeats), etc. Since the string has period 2, only 2 unique strings are generated, not 3.",
+        "c": "Correct! For 'ababab', cyclic shifts produce exactly 2 unique strings: 'ababab' and 'bababa'. This is because the string has period 2. Each shift either keeps it as 'ababab' (even shifts) or transforms it to 'bababa' (odd shifts). The equivalence class contains these 2 representatives.",
+        "d": "Incorrect! The string 'ababab' can produce at least 2 different strings through cyclic shifts ('ababab' and 'bababa'), so its equivalence class has more than one element."
+      },
+      "correctAnswer": "c",
+      "difficulty": "advanced"
     }
   ]
 }
